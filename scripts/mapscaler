@@ -1,0 +1,159 @@
+#!/usr/bin/python
+
+__version__ = '0.1.0'
+__author__ = 'Michael von Glasow (michael [ -a- ] vonglasow.com)'
+__copyright__ = 'Copyright 2014, Michael von Glasow'
+__license__ = 'GPL'
+
+# Scales a Navit map layout
+
+# BUGS:
+# Icons will not be scaled
+# Line dash patterns will not be scaled
+# Needs more testing
+# Element names may be case sensitive
+# May not work well for scaling down
+# May not catch some attributes
+
+import sys, os, subprocess, math
+from optparse import OptionParser
+import pxdom
+
+
+# Scales an attribute of an element
+def scaleAttribute(el, attr, scale):
+  if el.hasAttribute(attr):
+    oldval = float(el.getAttribute(attr))
+    newval = "{nv}" .format(nv=int(math.ceil(oldval * float(scale))))
+    #print "Scaling {e}.{a} by factor {f}, from {ov} to {nv}" .format(e=el.localName, a=attr, f=scale, ov=oldval, nv=newval)
+    el.setAttribute(attr, newval)
+
+
+# Processes a coord element, scaling its x and y.
+def processCoord(coord, scale):
+  scaleAttribute(coord, "x", scale)
+  scaleAttribute(coord, "y", scale)
+
+
+# Processes an arrows element, scaling its width
+def processArrows(arrows, scale):
+  scaleAttribute(arrows, "width", scale)
+
+
+# Processes a circle element, scaling its radius, width and text_size and invoking processCoord for
+# each of its coord nodes.
+def processCircle(circle, scale):
+  scaleAttribute(circle, "radius", scale)
+  scaleAttribute(circle, "text_size", scale)
+  scaleAttribute(circle, "width", scale)
+  coords = circle.getElementsByTagName("coord")
+  for coord in coords:
+    processCoord(coord, scale)
+
+
+# Processes a polygon element, invoking processCoord for each of its coord nodes.
+def processPolygon(polygon, scale):
+  coords = polygon.getElementsByTagName("coord")
+  for coord in coords:
+    processCoord(coord, scale)
+
+
+# Processes a polyline element, scaling its width and invoking processCoord for each of its coord
+# nodes.
+def processPolyline(polyline, scale):
+  #FIXME: dash is currently left untouched
+  scaleAttribute(polyline, "width", scale)
+  coords = polyline.getElementsByTagName("coord")
+  for coord in coords:
+    processCoord(coord, scale)
+
+
+# Processes a text element, scaling its text_size.
+def processText(text, scale):
+  scaleAttribute(text, "text_size", scale)
+
+
+# Processes an itemgra element, scaling all elements underneath as needed.
+def processItemgra(itemgra, scale):
+  els = itemgra.getElementsByTagName("arrows")
+  for el in els:
+    processArrows(el, scale)
+  els = itemgra.getElementsByTagName("circle")
+  for el in els:
+    processCircle(el, scale)
+  #FIXME: Icons are currently left untouched
+  #els = itemgra.getElementsByTagName("icon")
+  #for el in els:
+  #  processIcon(el, scale)
+  els = itemgra.getElementsByTagName("polygon")
+  for el in els:
+    processPolygon(el, scale)
+  els = itemgra.getElementsByTagName("polyline")
+  for el in els:
+    processPolyline(el, scale)
+  els = itemgra.getElementsByTagName("text")
+  for el in els:
+    processText(el, scale)
+
+
+# Processes a cursor or layer element, invoking processItemgra for each of its itemgra nodes.
+def processCursorOrLayer(element, scale):
+  itemgras = element.getElementsByTagName("itemgra")
+  for itemgra in itemgras:
+    processItemgra(itemgra, scale)
+
+
+# Processes a layout element, invoking processCursorOrLayer for each of its cursor or layer elements.
+def processLayout(layout, scale):
+  cursors = layout.getElementsByTagName("cursor")
+  for cursor in cursors:
+    processCursorOrLayer(cursor, scale)
+  layers = layout.getElementsByTagName("layer")
+  for layer in layers:
+    processCursorOrLayer(layer, scale)
+
+
+# Processes an XML subtree (which can be the entire document). If the root node is a layout element,
+# processLayout() is invoked. Else all child elemets are iterated and processSubtree() is invoked
+# for each of them. 
+def processSubtree(root, scale):
+  if root.localName=="layout":
+    processLayout(root, scale)
+  else:
+    children = root.getElementsByTagName("*")
+    for child in children:
+      processSubtree(child, scale)
+
+
+# Main procedure
+def main(options):
+  in_file = options['infile']
+  out_file = options['outfile']
+  scale = options['scale']
+
+  dom = pxdom.getDOMImplementation('')
+  parser = dom.createLSParser(dom.MODE_SYNCHRONOUS, None)
+  parser.domConfig.setParameter('entities', 0) # 1 -> exception if attribute values is set
+  #parser.domConfig.setParameter('disallow-doctype', 1)
+  parser.domConfig.setParameter('pxdom-resolve-resources', 1) # 1 -> replace &xyz; with text
+
+  document = parser.parseURI(in_file)
+  
+  processSubtree(document, scale)
+  
+  #print "Saving document"
+  output = document.implementation.createLSOutput()
+  output.systemId = out_file
+  output.encoding = 'utf-8'
+  serializer = document.implementation.createLSSerializer()
+  serializer.write(document, output)
+  
+if __name__ == '__main__':
+  parser = OptionParser()
+  parser.add_option("-i", "--infile", dest="infile", help="input filename, default is 'navit.xml'", default="navit.xml")
+  parser.add_option("-o", "--outfile", dest="outfile", help="output filename, default is 'navit-scaled.xml'", default="navit-scaled.xml")
+  parser.add_option("-s", "--scale", dest="scale", help="scale factor, default is 2", default=2)
+  (options, args) = parser.parse_args()
+  print options
+  main(options.__dict__)
+  sys.exit(0)
