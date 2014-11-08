@@ -1,0 +1,114 @@
+#!/bin/bash
+
+# This script runs a test suite of routes and stores their output for comparison.
+# It assumes that source code resides in a git repository (cloned with git svn clone), and that the
+# two different versions of the routing algorithm exist in different branches. A prerequisite for
+# running the test suite is that no uncommitted changes exist in the repo.
+
+# The source dir, into which you checked out the Navit source code.
+srcdir=$HOME/src/navit
+
+# The root of the working directory tree.
+# In the default config, it is the root for builddir and testcases. It is not used anywhere else.
+# You can choose this arbitrarily.
+buildroot=$HOME/workspaces/navit
+
+# The build directory, i.e. directory which will hold the binary tree for the platform.
+# You can choose this arbitrarily.
+builddir=$buildroot/linux-builddir
+
+# The directory in which the compiled Navit binary will be found.
+# In most cases this does not need to be modified.
+bindir=$builddir/navit
+
+# The Navit configuration file to use.
+# Leave this empty to use the default Navit config in bindir.
+config=$HOME/src/navit-artwork/config/linux/navit_gpsd.xml
+
+# The directory in which test output (GPX files) will be stored.
+# You can choose this arbitrarily.
+datadir=$HOME/workspaces/navit/testdata
+
+# The path to the test case specification.
+# This should be a path to a text file containing one line for each test case in the following format:
+# name start_longitude start_latitude dest_longitude dest_latitude
+# Separate parameters with spaces.
+testcases=$buildroot/route-testcases.txt
+
+# The master branch
+master=master
+
+# The feature branch
+feature=trac660
+
+cd $srcdir
+
+origbranch=`git rev-parse --abbrev-ref HEAD`
+
+git diff-index --quiet HEAD || (echo "Please commit (or stash) your changes before continuing."; exit 1)
+
+for branch in $master $feature
+do
+	cd $srcdir
+	
+	git checkout $branch
+
+	revision=`git svn find-rev $(git log --max-count 1 --pretty=format:%H)`
+	if [[ -z $revision ]]; then
+		revision=$(git log --max-count 1 --pretty=format:%h)
+	else
+		revision=r$revision
+	fi
+	
+	if [[ "$branch" == "$master" ]]; then
+		masterrev=$revision
+	elif [[ "$branch" == "$feature" ]]; then
+		featurerev=$revision
+	fi
+	
+	export SOURCE_PATH=$srcdir/navit
+	if [ ! -f $builddir ];
+	then
+	   mkdir $builddir
+	fi
+	cd $builddir && \
+	cmake $SOURCE_PATH && \
+	make || \
+	(echo "Build failed, check output for errors."; exit 1)
+
+	cd $bindir
+	./navit $config 2>/dev/null &
+
+	# give Navit time to start up
+	sleep 10
+	
+	while read testcase lng lat dlng dlat;
+	do
+		echo -n "Testing $testcase on $branch..."
+		dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.set_position string:"geo: $lng $lat" >/dev/null
+		dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.set_destination string:"geo: $dlng $dlat" string:"$testcase" >/dev/null
+		# wait until route calculation is complete
+		#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
+		# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
+		sleep 30
+		dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/route-$testcase-$branch-$revision.gpx" >/dev/null
+		echo " done"
+	done < $testcases
+
+	# quit Navit (currently this crashes Navit rather than exiting gracefully, but it serves our purpose)
+	dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.gui.command string:"quit()" >/dev/null
+
+done
+
+cd $srcdir
+git checkout $origbranch
+
+echo -e "\n\n\nTest results:\n-------------\n"
+
+while read testcase lng lat dlng dlat;
+do
+	diff $datadir/route-$testcase-$master-$masterrev.gpx $datadir/route-$testcase-$feature-$featurerev.gpx >/dev/null && \
+	echo "    $testcase: No change" || \
+	echo "*** $testcase: Changes detected!"
+done < $testcases
+
