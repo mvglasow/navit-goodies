@@ -55,11 +55,11 @@ fi
 
 git diff-index --quiet HEAD || (echo "Please commit (or stash) your changes before continuing."; exit 1)
 
-for branch in $master $branch
+for curbranch in $master $branch
 do
 	cd $srcdir
 	
-	git checkout $branch
+	git checkout $curbranch
 
 	revision=`git svn find-rev $(git log --max-count 1 --pretty=format:%H)`
 	if [[ -z $revision ]]; then
@@ -68,9 +68,9 @@ do
 		revision=r$revision
 	fi
 	
-	if [[ "$branch" == "$master" ]]; then
+	if [[ "$curbranch" == "$master" ]]; then
 		masterrev=$revision
-	elif [[ "$branch" == "$feature" ]]; then
+	elif [[ "$curbranch" == "$branch" ]]; then
 		featurerev=$revision
 	fi
 	
@@ -94,14 +94,14 @@ do
 	do
 		[[ "$testcase" =~ \#.* ]] && continue
 		[[ -z $testcase ]] && continue
-		echo -n "Testing $testcase on $branch..."
+		echo -n "Testing $testcase on $curbranch..."
 		dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.set_position string:"geo: $lng $lat" >/dev/null
 		dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.set_destination string:"geo: $dlng $dlat" string:"$testcase" >/dev/null
 		# wait until route calculation is complete
 		#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
 		# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
 		sleep 5
-		dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/route-$testcase-$branch-$revision.gpx" >/dev/null
+		dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/route-$testcase-$curbranch-$revision.gpx" >/dev/null
 		echo " done"
 	done < $testcases
 
