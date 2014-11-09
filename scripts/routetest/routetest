@@ -38,16 +38,24 @@ testcases=$HOME/src/navit-goodies/scripts/routetest/route-testcases.txt
 # The master branch
 master=master
 
-# The feature branch
-feature=trac660.2
+# The feature branch. Leave blank to use current branch.
+feature=
 
 cd $srcdir
 
 origbranch=`git rev-parse --abbrev-ref HEAD`
 
+if [[ -z $branch ]]; then
+	if [[ -z $feature ]]; then
+		branch=$origbranch
+	else
+		branch=$feature
+	fi
+fi
+
 git diff-index --quiet HEAD || (echo "Please commit (or stash) your changes before continuing."; exit 1)
 
-for branch in $master $feature
+for branch in $master $branch
 do
 	cd $srcdir
 	
@@ -111,7 +119,7 @@ while read testcase lng lat dlng dlat;
 do
 	[[ "$testcase" =~ \#.* ]] && continue
 	[[ -z $testcase ]] && continue
-	diff $datadir/route-$testcase-$master-$masterrev.gpx $datadir/route-$testcase-$feature-$featurerev.gpx >/dev/null && \
+	diff $datadir/route-$testcase-$master-$masterrev.gpx $datadir/route-$testcase-$branch-$featurerev.gpx >/dev/null && \
 	echo "    $testcase: No change" || \
 	echo "*** $testcase: Changes detected!"
 done < $testcases
