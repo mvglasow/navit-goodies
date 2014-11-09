@@ -39,18 +39,14 @@ testcases=$HOME/src/navit-goodies/scripts/routetest/route-testcases.txt
 master=master
 
 # The feature branch. Leave blank to use current branch.
-feature=
+branch=
 
 cd $srcdir
 
 origbranch=`git rev-parse --abbrev-ref HEAD`
 
 if [[ -z $branch ]]; then
-	if [[ -z $feature ]]; then
-		branch=$origbranch
-	else
-		branch=$feature
-	fi
+	branch=$origbranch
 fi
 
 git diff-index --quiet HEAD || (echo "Please commit (or stash) your changes before continuing."; exit 1)
