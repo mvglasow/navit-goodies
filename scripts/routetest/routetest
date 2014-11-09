@@ -23,7 +23,7 @@ bindir=$builddir/navit
 
 # The Navit configuration file to use.
 # Leave this empty to use the default Navit config in bindir.
-config=$HOME/src/navit-artwork/config/linux/navit_gpsd.xml
+config=$HOME/src/navit-goodies/config/linux/navit_gpsd.xml
 
 # The directory in which test output (GPX files) will be stored.
 # You can choose this arbitrarily.
@@ -39,7 +39,7 @@ testcases=$buildroot/route-testcases.txt
 master=master
 
 # The feature branch
-feature=trac660
+feature=trac660.2
 
 cd $srcdir
 
@@ -90,7 +90,7 @@ do
 		# wait until route calculation is complete
 		#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
 		# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
-		sleep 30
+		sleep 5
 		dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/route-$testcase-$branch-$revision.gpx" >/dev/null
 		echo " done"
 	done < $testcases
