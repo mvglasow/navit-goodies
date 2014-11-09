@@ -37,7 +37,41 @@ Via_Graf 9.1439748 45.5133242 9.1391345 45.5146592
 Langwieder_See 11.457781 48.1648526 11.4120844 48.1983823
 
 
+# Tests for missing/unnecessary as well as incorrect announcements
+
+#problem as of r5934
+Werder_W 12.8770471 52.3098972 12.7570371 52.3411968
+#control
+Werder_N 12.8770471 52.3098972 12.8387374 52.3945037
+
+#problem as of r5934
+Hamburg_Sued_S 10.073060 53.508260 10.037430 53.498250
+#control
+Hamburg_Sued_N 10.073060 53.508260 10.0262508 53.5205165
+
+#problem as of 5934
+Nuernberg_W 11.1956694 49.4085208 11.1860095 49.4696947
+#missing announcement
+Nuernberg_N 11.1956694 49.4085208 11.2825354 49.4965279
+
+
 # Tests for incorrect announcements
 
+#problem as of r5934
 Unterinntal_W 12.1034461 47.7371683 12.0157491 47.8163105
+#control
 Unterinntal_E 12.1229121 47.7259879 12.1675812 47.7990707
+
+#problem as of r5934
+Emmeloord_N 5.7416967 52.6831133 5.7716005 52.7201317
+#control
+Emmeloord_S 5.7416967 52.6831133 5.8136431 52.6416616
+
+#problem as of pre-r5934 (might be fixed in r5934 already)
+Petuelring 11.5750121 48.1781212 11.5719105 48.178083
+#no control for this one
+
+#problem as of r5934
+Nuernberg_S 11.18529 49.4700395 11.1957442 49.4099119
+#control
+Nuernberg_E 11.18529 49.4700395 11.2694876 49.4374417
