@@ -149,32 +149,32 @@ Waypoint</text></img>
 		<!-- for a debug log -->
 		<log enabled="no" type="textfile_debug" data="debug_%Y%m%d-%i.txt" flush_size="1000" flush_time="30"/>
 		<!-- osd items allow to position display and control items directly on top of the map: -->
-		<osd type="button" command="" src="/home/michael/src/navit-artwork/png/ldpi/status_no_position_ldpi.png" w="64" h="71" align="5" x="0" y="0" enable_expression='route.route_status==1'/>
-		<osd type="button" command="" src="/home/michael/src/navit-artwork/png/ldpi/status_no_route_ldpi.png" w="64" h="71" align="5" x="0" y="0" enable_expression='route.route_status&amp;2'/>
-		<osd type="button" command="" src="/home/michael/src/navit-artwork/png/ldpi/status_calculating_ldpi.png" w="64" h="71" align="5" x="0" y="0" enable_expression='route.route_status&amp;12'/>
+		<osd type="button" command="" src="/home/michael/src/navit-goodies/png/ldpi/status_no_position_ldpi.png" w="64" h="71" align="5" x="0" y="0" enable_expression='route.route_status==1'/>
+		<osd type="button" command="" src="/home/michael/src/navit-goodies/png/ldpi/status_no_route_ldpi.png" w="64" h="71" align="5" x="0" y="0" enable_expression='route.route_status&amp;2'/>
+		<osd type="button" command="" src="/home/michael/src/navit-goodies/png/ldpi/status_calculating_ldpi.png" w="64" h="71" align="5" x="0" y="0" enable_expression='route.route_status&amp;12'/>
 		<osd type="text" label="${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} " x="0" y="0" w="100%" h="14" font_size="200" background_color="#000000a0" enable_expression='route.route_status&gt;16'/>
         <osd type="compass" enabled="yes" x="-60" y="-94" w="60" h="80" font_size="200" background_color="#000000a0" osd_configuration="2"/>
         <osd type="text" label="${navigation.item.destination_length[named]}\n${navigation.item.destination_time[arrival]}" x="-60" y="14" w="60" h="40" font_size="200" background_color="#000000a0" enable_expression='route.route_status&gt;16'/>
         <osd type="navigation_next_turn" name="osd_next_turn" x="0" y="14" w="64" h="44" icon_src="%s_wh_64_64.png" background_color="#000000a0" enable_expression='route.route_status&gt;16'/>
         <osd type="text" label="${navigation.item[1].length[value]}" x="0" y="58" w="64" h="20" font_size="263" background_color="#000000a0" enable_expression='route.route_status&gt;16'/>
         <osd type="text" label="${navigation.item[1].length[unit]}" x="0" y="78" w="64" h="20" font_size="200" background_color="#000000a0" enable_expression='route.route_status&gt;16'/>
-        <osd type="button" src="/home/michael/src/navit-artwork/png/ldpi/zoom_in_ldpi.png" command="zoom_in()" x="-144" y="-56" w="36" h="36"/>
-        <osd type="button" src="/home/michael/src/navit-artwork/png/ldpi/zoom_out_ldpi.png" command="zoom_out()" x="-102" y="-56" w="36" h="36"/>
+        <osd type="button" src="/home/michael/src/navit-goodies/png/ldpi/zoom_in_ldpi.png" command="zoom_in()" x="-144" y="-56" w="36" h="36"/>
+        <osd type="button" src="/home/michael/src/navit-goodies/png/ldpi/zoom_out_ldpi.png" command="zoom_out()" x="-102" y="-56" w="36" h="36"/>
         <osd type="text" label="${tracking.item.street_name_systematic} ${tracking.item.street_name} " x="0" y="-14" w="100%" h="14" font_size="200" osd_configuration="2" background_color="#000000a0"/>
-        <osd type="toggle_announcer" x="-42" y="60" w="36" h="36" icon_src="/home/michael/src/navit-artwork/png/ldpi/%s_ldpi.png" background_color="#000000a0"/>
-        <osd type="button" src="/home/michael/src/navit-artwork/png/ldpi/set_center_cursor_ldpi.png" command="follow=0;set_center_cursor()" x="48" y="-56" w="36" h="36" enable_expression="follow&gt;1"/>
+        <osd type="toggle_announcer" x="-42" y="60" w="36" h="36" icon_src="/home/michael/src/navit-goodies/png/ldpi/%s_ldpi.png" background_color="#000000a0"/>
+        <osd type="button" src="/home/michael/src/navit-goodies/png/ldpi/set_center_cursor_ldpi.png" command="follow=0;set_center_cursor()" x="48" y="-56" w="36" h="36" enable_expression="follow&gt;1"/>
 		<osd name="profile" enabled="yes" type="button" x="6" y="-56" w="36" h="36" command='
 		vehicle.profilename=(
 		vehicle.profilename=="car"?"bike":
 		(vehicle.profilename=="bike"?"pedestrian":
 		"car"));
 		osd[@name=="profile"].src=
-		(vehicle.profilename=="car" || vehicle.profilename=="bike" || vehicle.profilename=="pedestrian")?"/sdcard/navit/osd/profile_"+vehicle.profilename+"_xxhdpi.png":"/home/michael/src/navit-artwork/png/ldpi/profile_unknown_ldpi.png"
-		' src="/home/michael/src/navit-artwork/png/ldpi/profile_unknown_ldpi.png"/>
+		(vehicle.profilename=="car" || vehicle.profilename=="bike" || vehicle.profilename=="pedestrian")?"/sdcard/navit/osd/profile_"+vehicle.profilename+"_xxhdpi.png":"/home/michael/src/navit-goodies/png/ldpi/profile_unknown_ldpi.png"
+		' src="/home/michael/src/navit-goodies/png/ldpi/profile_unknown_ldpi.png"/>
 		
 		<osd name="my_osd_cmdif_2" h="1" w="1"  update_period="2"  enabled="yes" type="cmd_interface" x="6"  y="208" background_color="#00000000" command='
 		osd[@name=="profile"].src=
-		(vehicle.profilename=="car" || vehicle.profilename=="car_avoid_tolls" || vehicle.profilename=="bike" || vehicle.profilename=="pedestrian" || vehicle.profilename=="horse" || vehicle.profilename=="Truck")?"/home/michael/src/navit-artwork/png/ldpi/profile_"+vehicle.profilename+"_ldpi.png":"/home/michael/src/navit-artwork/png/ldpi/profile_unknown_ldpi.png"
+		(vehicle.profilename=="car" || vehicle.profilename=="car_avoid_tolls" || vehicle.profilename=="bike" || vehicle.profilename=="pedestrian" || vehicle.profilename=="horse" || vehicle.profilename=="Truck")?"/home/michael/src/navit-goodies/png/ldpi/profile_"+vehicle.profilename+"_ldpi.png":"/home/michael/src/navit-goodies/png/ldpi/profile_unknown_ldpi.png"
 		'/>
 		
 		<!-- osd_configuration: 
