@@ -33,7 +33,7 @@ datadir=$HOME/workspaces/navit/testdata
 # This should be a path to a text file containing one line for each test case in the following format:
 # name start_longitude start_latitude dest_longitude dest_latitude
 # Separate parameters with spaces.
-testcases=$buildroot/route-testcases.txt
+testcases=$HOME/src/navit-goodies/scripts/routetest/route-testcases.txt
 
 # The master branch
 master=master
@@ -84,6 +84,8 @@ do
 	
 	while read testcase lng lat dlng dlat;
 	do
+		[[ "$testcase" =~ \#.* ]] && continue
+		[[ -z $testcase ]] && continue
 		echo -n "Testing $testcase on $branch..."
 		dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.set_position string:"geo: $lng $lat" >/dev/null
 		dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.set_destination string:"geo: $dlng $dlat" string:"$testcase" >/dev/null
@@ -107,6 +109,8 @@ echo -e "\n\n\nTest results:\n-------------\n"
 
 while read testcase lng lat dlng dlat;
 do
+	[[ "$testcase" =~ \#.* ]] && continue
+	[[ -z $testcase ]] && continue
 	diff $datadir/route-$testcase-$master-$masterrev.gpx $datadir/route-$testcase-$feature-$featurerev.gpx >/dev/null && \
 	echo "    $testcase: No change" || \
 	echo "*** $testcase: Changes detected!"

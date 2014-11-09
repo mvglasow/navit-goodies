@@ -1,3 +1,15 @@
+# This file contains routing test cases for the routetest script.
+# Each line corresponds to one test case and has the following format:
+#
+# name from_lon from_lat to_lon to_lat
+#
+# where:
+# name is the name of the test case. Whitespaces are not allowed, and dashes should be avoided (we use them as field separators in filenames).
+# from_lon and from_lat are the start coordinates, in a format accepted by Navit's dbus interface (decimal works). Note that lon is first!
+# to_lon and to_lat are the coordiates for the destination, same rules as above apply.
+#
+# Lines starting with # are comment lines and will be ignored. Empty lines will also be skipped.
+
 Emeryville -122.2937179811110866 37.8439930619099130 -122.2647238525362638 37.8233168235070281
 B13 11.5872539 48.2104044 11.580226 48.25165
 Eschenried 11.5026473 48.1217347 11.4097391 48.1995844
