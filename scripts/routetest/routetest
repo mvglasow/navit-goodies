@@ -38,8 +38,10 @@ testcases=$HOME/src/navit-goodies/scripts/routetest/route-testcases.txt
 # The master branch
 master=master
 
-# The feature branch. Leave blank to use current branch.
-branch=
+if [[ -z $branch ]]; then
+	# The feature branch. Leave blank to use current branch.
+	branch=
+fi
 
 cd $srcdir
 
