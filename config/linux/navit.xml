@@ -169,7 +169,7 @@ Waypoint</text></img>
 		(vehicle.profilename=="bike"?"pedestrian":
 		"car"));
 		osd[@name=="profile"].src=
-		(vehicle.profilename=="car" || vehicle.profilename=="bike" || vehicle.profilename=="pedestrian")?"/sdcard/navit/osd/profile_"+vehicle.profilename+"_xxhdpi.png":"/home/michael/src/navit-goodies/png/ldpi/profile_unknown_ldpi.png"
+		(vehicle.profilename=="car" || vehicle.profilename=="bike" || vehicle.profilename=="pedestrian")?"/home/michael/src/navit-goodies/png/ldpi/profile_"+vehicle.profilename+"_ldpi.png":"/home/michael/src/navit-goodies/png/ldpi/profile_unknown_ldpi.png"
 		' src="/home/michael/src/navit-goodies/png/ldpi/profile_unknown_ldpi.png"/>
 		
 		<osd name="my_osd_cmdif_2" h="1" w="1"  update_period="2"  enabled="yes" type="cmd_interface" x="6"  y="208" background_color="#00000000" command='
