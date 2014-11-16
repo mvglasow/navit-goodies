@@ -98,6 +98,9 @@ def processItemgra(itemgra, scale):
 
 # Processes a cursor or layer element, invoking processItemgra for each of its itemgra nodes.
 def processCursorOrLayer(element, scale):
+  scaleAttribute(coord, "w", scale)
+  scaleAttribute(coord, "h", scale)
+  #TODO: change w and h only for cursor
   itemgras = element.getElementsByTagName("itemgra")
   for itemgra in itemgras:
     processItemgra(itemgra, scale)
