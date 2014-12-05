@@ -57,7 +57,7 @@ Nuernberg_N 11.1956694 49.4085208 11.2825354 49.4965279
 
 # Tests for incorrect announcements
 
-#problem as of r5934
+#problem as of r5934 (expected: keep left onto A8 towards Munich)
 Unterinntal_W 12.1034461 47.7371683 12.0157491 47.8163105
 #control
 Unterinntal_E 12.1229121 47.7259879 12.1675812 47.7990707
@@ -75,3 +75,7 @@ Petuelring 11.5750121 48.1781212 11.5719105 48.178083
 Nuernberg_S 11.18529 49.4700395 11.1957442 49.4099119
 #control
 Nuernberg_E 11.18529 49.4700395 11.2694876 49.4374417
+
+
+# Test for U-turn maneuver
+Kruishoutem 3.4905054 50.9148007 3.5010574 50.9187998
