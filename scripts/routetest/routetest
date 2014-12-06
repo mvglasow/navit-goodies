@@ -35,8 +35,10 @@ datadir=$HOME/workspaces/navit/testdata
 # Separate parameters with spaces.
 testcases=$HOME/src/navit-goodies/scripts/routetest/route-testcases.txt
 
-# The master branch
-master=master
+if [[ -z $master ]]; then
+	# The master branch
+	master=master
+fi
 
 if [[ -z $branch ]]; then
 	# The feature branch. Leave blank to use current branch.
