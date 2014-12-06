@@ -76,6 +76,10 @@ Nuernberg_S 11.18529 49.4700395 11.1957442 49.4099119
 #control
 Nuernberg_E 11.18529 49.4700395 11.2694876 49.4374417
 
+# slight left turn (other option being sharp left turn)
+Ichostrasse_S 11.5797705 48.1158902 11.5766389 48.1147486
+# sharp left turn (other option being slight left turn)
+Ichostrasse_SE 11.5797705 48.1158902 11.5784323 48.1154427
 
-# Test for U-turn maneuver
+# Test for U-turn maneuver (expected: U turn)
 Kruishoutem 3.4905054 50.9148007 3.5010574 50.9187998
