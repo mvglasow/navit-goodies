@@ -86,6 +86,9 @@ Merelbeke_R4 3.8298204583910644 50.97222317339164 3.751473665864085 51.010994974
 # interchange with exit, leaving motorway (expected: exit right)
 Merelbeke_Exit 3.8298204583910644 50.97222317339164 3.778962199734684 51.00518871028347
 
+# interchange with distributor lanes
+Brugge 3.2515552 51.1386845 3.2098421 51.1720398
+
 
 # Tests for U-turn maneuvers
 
@@ -95,3 +98,16 @@ Kruishoutem 3.4905054 50.9148007 3.5010574 50.9187998
 # two-pass U turn
 Effnerplatz 11.6165189 48.1550317 11.6170732 48.1547549
 
+
+# Tests for roundabouts
+
+# expected: go straight
+Aalter_straight 3.4562561 51.0740589 3.4452393 51.0809038
+# expected: turn right (or easily right)
+Aalter_right 3.4562561 51.0740589 3.4497076 51.0777988
+# expected: turn left (or easily left)
+Aalter_left 3.4562561 51.0740589 3.4473245 51.0759766
+# expected: turn sharply left
+Aalter_sharp_left 3.4562561 51.0740589 3.4507689 51.073972
+# expected: turn around
+Aalter_turnaround 3.4562561 51.0740589 3.4527975 51.075398
