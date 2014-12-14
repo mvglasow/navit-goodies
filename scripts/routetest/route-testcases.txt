@@ -81,5 +81,17 @@ Ichostrasse_S 11.5797705 48.1158902 11.5766389 48.1147486
 # sharp left turn (other option being slight left turn)
 Ichostrasse_SE 11.5797705 48.1158902 11.5784323 48.1154427
 
-# Test for U-turn maneuver (expected: U turn)
+# interchange with exit, going to other motorway (expected: keep right)
+Merelbeke_R4 3.8298204583910644 50.97222317339164 3.751473665864085 51.010994974398095
+# interchange with exit, leaving motorway (expected: exit right)
+Merelbeke_Exit 3.8298204583910644 50.97222317339164 3.778962199734684 51.00518871028347
+
+
+# Tests for U-turn maneuvers
+
+# single-pass U turn where separate carriageways join (expected: U turn)
 Kruishoutem 3.4905054 50.9148007 3.5010574 50.9187998
+
+# two-pass U turn
+Effnerplatz 11.6165189 48.1550317 11.6170732 48.1547549
+
