@@ -36,6 +36,15 @@ A92 12.1517654 48.5364928 11.4676387 48.2266316
 Via_Graf 9.1439748 45.5133242 9.1391345 45.5146592
 Langwieder_See 11.457781 48.1648526 11.4120844 48.1983823
 
+# end of motorway (expected: no exit maneuver)
+Eschenlohe 11.4173773 48.0129575 11.1746427 47.5870372
+
+# carriageway split, then left turn (expected: no keep right before turn left)
+Ehrwald 11.0399926 47.4828025 10.9167358 47.406412
+
+# carriageway split (expected: no maneuver)
+Imst_B171 10.7452466 47.2298023 10.7485459 47.2261087
+
 
 # Tests for missing/unnecessary as well as incorrect announcements
 
@@ -89,6 +98,11 @@ Merelbeke_Exit 3.8298204583910644 50.97222317339164 3.778962199734684 51.0051887
 # interchange with distributor lanes
 Brugge 3.2515552 51.1386845 3.2098421 51.1720398
 
+# expected: keep left
+Imst_A12_W 10.7519953 47.2227609 10.5872366 47.1673728
+# control (expected: keep right)
+Imst_A12_E 10.7519953 47.2227609 10.8440223 47.237412
+
 
 # Tests for U-turn maneuvers
 
@@ -111,3 +125,8 @@ Aalter_left 3.4562561 51.0740589 3.4473245 51.0759766
 Aalter_sharp_left 3.4562561 51.0740589 3.4507689 51.073972
 # expected: turn around
 Aalter_turnaround 3.4562561 51.0740589 3.4527975 51.075398
+
+# expected: go straight/slightly left (counterclockwise)
+Lucca_straight 10.4951033 43.8379873 10.4947132 43.8412217
+# expected: go (slightly) left
+Lucca_left 10.4947132 43.8412217 10.4974559 43.8389593
