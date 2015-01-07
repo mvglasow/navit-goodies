@@ -111,6 +111,8 @@ Aalter_left 3.4562561 51.0740589 3.4473245 51.0759766
 Aalter_sharp_left 3.4562561 51.0740589 3.4507689 51.073972
 # expected: turn around
 Aalter_turnaround 3.4562561 51.0740589 3.4527975 51.075398
+# expected: go straight
+Garmisch_straight 11.1036204 47.5053893 11.1382746 47.5589938
 
 
 # Mix of long routes to test for unexpected regressions
