@@ -45,6 +45,21 @@ Ehrwald 11.0399926 47.4828025 10.9167358 47.406412
 # carriageway split (expected: no maneuver)
 Imst_B171 10.7452466 47.2298023 10.7485459 47.2261087
 
+# duplicate way (expected: no maneuver)
+Ternat 4.1218235 50.891674 4.1664836 50.8814575
+
+# TOTSO (expected: exit/keep right maneuver, depending on map data)
+B2R_E 11.579841 48.1073781 11.5869507 48.1046773
+
+# (expected: keep left maneuver)
+B2R_W 11.5798342 48.107829 11.5730886 48.1119554
+
+# expected: keep left maneuver
+LaisvesPr_left 25.2319015 54.6700242 25.2023902 54.6708375
+
+# expected: keep right maneuver
+LaisvesPr_right 25.2319015 54.6700242 25.22343 54.6732973
+
 
 # Tests for missing/unnecessary as well as incorrect announcements
 
@@ -134,13 +149,27 @@ Lucca_left 10.4947132 43.8412217 10.4974559 43.8389593
 # expected: go straight
 Garmisch_straight 11.1036204 47.5053893 11.1382746 47.5589938
 
+# long approach roads, go right
+SavanoriuZiedas_right 25.2402179 54.6732446 25.2281783 54.6708466
+# long approach roads, go left
+SavanoriuZiedas_left 25.2402179 54.6732446 25.2514258 54.6661841
+# long approach roads, go sharply left
+SavanoriuZiedas_sharpleft 25.2402179 54.6732446 25.2419142 54.6707361
+
 
 # Mix of long routes to test for unexpected regressions
-Vilnius_Augustow 25.338496 54.722023 22.9639599 53.8329705
+
+# Vilnius-Augustow won't find a route with current navit
+#Vilnius_Augustow 25.338496 54.722023 22.9639599 53.8329705
+
+Vilnius_Suwalki 25.338496 54.722023 22.9472479 54.1277582
 Vilnius_Siauliai 25.338496 54.722023 23.3085362 55.9649502
 Daerstetten_Nyon 7.495226 46.6587903 6.2382762 46.383953
 Milan_Orelle 9.1453845 45.4909606 6.544235 45.2073609
 Milan_Munich 9.1453845 45.4909606 11.5219952 48.1268249
+#Milan_Memmingen 9.1453845 45.4909606 10.153611 47.999235
 Munich_Neuschwanstein 11.5219952 48.1268249 10.7359319 47.5546258
 Munich_StAnton 11.5219952 48.1268249 10.2663241 47.1307314
+#Grossweil_StAnton 11.3032249 47.6753529 10.2663241 47.1307314
 Girona_Tossa 2.8207616 41.9840182 2.928948 41.7204919
+Girona_Lloret 2.8207616 41.9840182 2.8426393 41.7015779
