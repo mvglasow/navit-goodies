@@ -110,6 +110,7 @@ do
 		echo " done"
 	done < $testcases
 
+	echo "Closing Navit"
 	# quit Navit (currently this crashes Navit rather than exiting gracefully, but it serves our purpose)
 	dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.gui.command string:"quit()" >/dev/null
 
