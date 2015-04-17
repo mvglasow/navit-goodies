@@ -32,9 +32,24 @@ Arbedo_Castione 9.1977032 46.3163555 9.0428477 46.2130041
 Roveredo_SW 9.1977032 46.3163555 9.1240505 46.2336662
 Lostallo 9.0291322 46.1952327 9.1977032 46.3163555
 Roveredo_NE 9.0291322 46.1952327 9.1240505 46.2336662
-A92 12.1517654 48.5364928 11.4676387 48.2266316
+A92 12.1517654 48.5364928 11.4851702 48.2115058
 Via_Graf 9.1439748 45.5133242 9.1391345 45.5146592
 Langwieder_See 11.457781 48.1648526 11.4120844 48.1983823
+
+# expected: turn left into Belgradstraße (T junction, dual carriageway with separate cycleways)
+Belgradstrasse 11.5756989 48.1701228 11.5743637 48.1644995
+
+# expected: turn left into Piazza Trento (T junction, dual carriageway with service road between, name change at junction)
+Piazza_Trento 9.1997328 45.4477791 9.204371 45.4466776
+
+# expected: turn left into express lane of Viale Fulvio Testi (T junction, local-express lane system)
+Testi 9.1951649 45.5075365 9.201847 45.5083415
+
+# expected: turn left into local lane of Viale Molise (T junction, local-express lane system)
+Viale_Molise 9.2218313 45.4562726 9.2242859 45.458147
+
+# expected: turn left into Ismaninger Straße
+Ismaninger_Strasse 11.7561528 48.390247 11.7512848 48.3836174
 
 # end of motorway (expected: no exit maneuver)
 Eschenlohe 11.4173773 48.0129575 11.1746427 47.5870372
@@ -155,6 +170,9 @@ SavanoriuZiedas_right 25.2402179 54.6732446 25.2281783 54.6708466
 SavanoriuZiedas_left 25.2402179 54.6732446 25.2514258 54.6661841
 # long approach roads, go sharply left
 SavanoriuZiedas_sharpleft 25.2402179 54.6732446 25.2419142 54.6707361
+
+# expected: turn around
+Pont_Sainte_Maxence 2.6866027 49.3180681 2.6860542 49.3170062
 
 
 # Mix of long routes to test for unexpected regressions
