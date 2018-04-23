@@ -53,7 +53,7 @@ if [[ -z $branch ]]; then
 	branch=$origbranch
 fi
 
-git diff-index --quiet HEAD || (echo "Please commit (or stash) your changes before continuing."; exit 1)
+git diff-index --quiet HEAD || { echo "Please commit (or stash) your changes before continuing."; exit 1; }
 
 for curbranch in $master $branch
 do
@@ -87,7 +87,7 @@ do
 	cd $builddir && \
 	cmake $SOURCE_PATH && \
 	make || \
-	(echo "Build failed, check output for errors."; exit 1)
+	{ echo "Build failed, check output for errors."; exit 1; }
 
 	cd $bindir
 	./navit $config 2>/dev/null &
