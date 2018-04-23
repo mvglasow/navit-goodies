@@ -1,0 +1,21 @@
+# This file contains routing test cases for the traffic-test script.
+# Each line corresponds to one test case and has the following format:
+#
+# name from_lon from_lat to_lon to_lat
+#
+# where:
+# name is the name of the test case. Whitespaces are not allowed, and dashes should be avoided (we use them as field separators in filenames).
+#    The script also expects two files named name.xml and name-cancel.xml, which hold the traffic feed and a feed of cancellation messages.
+# from_lon and from_lat are the start coordinates, in a format accepted by Navit's dbus interface (decimal works). Note that lon is first!
+# to_lon and to_lat are the coordiates for the destination, same rules as above apply.
+#
+# Lines starting with # are comment lines and will be ignored. Empty lines will also be skipped.
+
+
+Munich_Geisenhausen 11.5219952 48.1268249 11.5937331 48.5539449
+Munich_Stuttgart 11.5219952 48.1268249 9.1898021 48.6901540
+#Landeck_Feldkirch 10.5645747 47.1390545 9.5988119 47.2352486
+#Feldkirch_Landeck 9.5988119 47.2352486 10.5645747 47.1390545
+Oberau_Obsteig 11.1381815 47.5598709 10.9278973 47.2979526
+# same traffic message as above, but reversed route—both pre and post should be the same here!
+Obsteig_Oberau 10.9278973 47.2979526 11.1381815 47.5598709

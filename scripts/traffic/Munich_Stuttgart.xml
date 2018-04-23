@@ -1,0 +1,16 @@
+<!DOCTYPE navit_messages [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<navit_messages>
+  <message id="test:A8-76-75" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location directionality="ONE_DIRECTION" fuzziness="LOW_RES" road_type="highway_land" road_ref="A8" destination="Stuttgart" tmc_direction="+1" tmc_table="58:1">
+      <from junction_name="Sulzemoos" junction_ref="77" tmc_id="12558+3">+48.2806 +11.27</from>
+      <to junction_name="Adelzhausen" junction_ref="75" tmc_id="12558">+48.3521 +11.1342</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+</navit_messages>

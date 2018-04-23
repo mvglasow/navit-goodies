@@ -1,0 +1,16 @@
+<!DOCTYPE navit_messages [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<navit_messages>
+  <message id="test:B179-S" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location directionality="ONE_DIRECTION" fuzziness="LOW_RES" road_type="street_4_land" road_ref="B179" destination="Nassereith" tmc_direction="-1" tmc_table="4:1">
+      <from junction_name="Fernsteinsee" tmc_id="36891-2">+47.34368 +10.81867</from>
+      <to junction_name="Nassereith" tmc_id="36891">+47.30514 +10.84098</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+</navit_messages>

@@ -1,0 +1,12 @@
+<!DOCTYPE navit_messages [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<navit_messages>
+  <message id="test:A9-68-67" cancellation="true" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location directionality="ONE_DIRECTION" fuzziness="LOW_RES" road_type="highway_land" road_ref="A9" destination="Nürnberg" tmc_direction="-1" tmc_table="58:1">
+      <from junction_name="Neufahrn" junction_ref="68" tmc_id="12732-4">+48.316399 +11.620800</from>
+      <to junction_name="Allershausen" junction_ref="67" tmc_id="12732">+48.429001 +11.589300</to>
+    </location>
+  </message>
+</navit_messages>
