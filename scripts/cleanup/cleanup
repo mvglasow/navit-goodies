@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 which astyle > /dev/null || { echo "Please install astyle before continuing."; exit 1; }
 which indent > /dev/null || { echo "Please install indent before continuing."; exit 1; }
