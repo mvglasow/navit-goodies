@@ -1,7 +1,6 @@
 #!/bin/bash
 
 which astyle > /dev/null || { echo "Please install astyle before continuing."; exit 1; }
-which indent > /dev/null || { echo "Please install indent before continuing."; exit 1; }
 which vi > /dev/null || { echo "Please install vi before continuing."; exit 1; }
 
 git diff-index --quiet HEAD || { echo "Please commit (or stash) your changes before continuing."; exit 1; }
