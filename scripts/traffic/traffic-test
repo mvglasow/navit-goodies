@@ -37,6 +37,21 @@ datadir=$HOME/workspaces/navit/testdata
 testcases=$HOME/src/navit-goodies/scripts/traffic/traffic-testcases.txt
 
 
+interactive=0
+sleep=5
+
+if [[ "$1" == "-i" ]]; then
+    interactive=1
+elif [[ "$1" == "-l" ]]; then
+    sleep=100
+elif [[ -n "$@" ]]; then
+    echo "Usage: $0 [-i|-l]"
+    echo "-i  Interactive (do not wait but prompt after every step)"
+    echo "-l  Long delays (for testing with Valgrind)"
+    exit 0
+fi
+
+
 # TODO check for presence of xmlstarlet
 
 # Uncomment the following to start Navit manually.
@@ -58,15 +73,19 @@ do
 	xmlstarlet c14n $testcase.xml  > /tmp/$testcase.xml
 	xmlstarlet c14n $testcase-cancel.xml  > /tmp/$testcase-cancel.xml
 
-	echo -n "Testing $testcase..."
+	echo -e -n "\nTesting $testcase..."
 	# set start and destination
 	dbus-send  --print-reply --session --type=method_call --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.set_position string:"geo: $lng $lat" >/dev/null
 	dbus-send  --print-reply --session --type=method_call --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.set_destination string:"geo: $dlng $dlat" string:"$testcase" >/dev/null
 	# wait until route calculation is complete
 	#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
 	# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
-	# TODO 5s for native, 100s for Valgrind
-	sleep 5
+    if [ $interactive -gt 0 ]; then
+        echo "Destination set; when route calculation is complete, press [ENTER] to continue"
+        read -s < /dev/tty
+    else
+	    sleep $sleep
+    fi
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-pre.gpx" >/dev/null
 	
 	# inject traffic messages
@@ -76,8 +95,12 @@ do
 	# wait until route calculation is complete
 	#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
 	# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
-	# TODO 5s for native, 100s for Valgrind
-	sleep 5
+    if [ $interactive -gt 0 ]; then
+        echo "Traffic feed sent; when the route has updated, press [ENTER] to continue"
+        read -s < /dev/tty
+    else
+	    sleep $sleep
+    fi
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-post-update.gpx" >/dev/null
 	
 	# set destination again to force route recalculation
@@ -85,8 +108,12 @@ do
 	# wait until route calculation is complete
 	#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
 	# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
-	# TODO 5s for native, 100s for Valgrind
-	sleep 5
+    if [ $interactive -gt 0 ]; then
+        echo "Route recalculation started; when complete, press [ENTER] to continue"
+        read -s < /dev/tty
+    else
+	    sleep $sleep
+    fi
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-post-full.gpx" >/dev/null
 	
 	# inject cancellation messages
