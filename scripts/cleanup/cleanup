@@ -19,6 +19,6 @@ find . -type f \( -not -path './navit/support/*' -a -not -path './navit/fib-1.1/
 
 #git commit -am 'cleanup:cmake:remove trailing spaces'
 
-find . -iname 'CMakeLists.txt' -exec ex +"set syn=cmake" +"set noexpandtab" +"norm gg=G" -cwq {} \;
+#find . -iname 'CMakeLists.txt' -exec ex +"set syn=cmake" +"set noexpandtab" +"norm gg=G" -cwq {} \;
 
 #git commit -am 'cleanup:cmake:retab all CMakeLists.txt files'
