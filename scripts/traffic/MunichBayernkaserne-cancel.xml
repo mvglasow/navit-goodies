@@ -1,0 +1,12 @@
+<!DOCTYPE navit_messages [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<navit_messages>
+  <message id="test:M25" cancellation="true" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location directionality="ONE_DIRECTION" fuzziness="LOW_RES" road_name="Maria-Probst-Straße">
+      <from junction_name="Helene-Wessel-Bogen">+48.1928635 +11.5993228</from>
+      <to junction_name="Margot-Kalinke-Straße">+48.1928020 +11.5965161</to>
+    </location>
+  </message>
+</navit_messages>
