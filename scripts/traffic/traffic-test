@@ -86,13 +86,12 @@ do
     else
 	    sleep $sleep
     fi
-	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-pre.gpx" >/dev/null
+	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-1-initial.gpx" >/dev/null
 	
 	# inject traffic messages
 	echo "Sending traffic feed..."
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.traffic_inject string:"/tmp/$testcase.xml" >/dev/null
 	
-	# TODO test immediately after injecting messages (is the route updated immediately)?
 	# wait until route calculation is complete
 	#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
 	# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
@@ -102,7 +101,7 @@ do
     else
 	    sleep $sleep
     fi
-	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-post-update.gpx" >/dev/null
+	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-2-partial-update.gpx" >/dev/null
 	
 	# set destination again to force route recalculation
 	echo "Setting destination to force full route recalculation..."
@@ -116,10 +115,21 @@ do
     else
 	    sleep $sleep
     fi
-	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-post-full.gpx" >/dev/null
+	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-3-full-update.gpx" >/dev/null
 	
 	# inject cancellation messages
+	echo "Setting cancellation for traffic feed..."
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.traffic_inject string:"/tmp/$testcase-cancel.xml" >/dev/null
-	echo " done"
+	# wait until route calculation is complete
+	#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
+	# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
+    if [ $interactive -gt 0 ]; then
+        echo "When the route has updated, press [ENTER] to continue"
+        read -s < /dev/tty
+    else
+	    sleep $sleep
+    fi
+	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-4-cancellation.gpx" >/dev/null
+	echo "$testcase: done"
 done < $testcases
 
