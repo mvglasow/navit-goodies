@@ -1,0 +1,12 @@
+<!DOCTYPE navit_messages [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<navit_messages>
+  <message id="test:M26-2" cancellation="true" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location directionality="ONE_DIRECTION" fuzziness="LOW_RES" road_name="Hanauer Straße">
+      <from junction_name="Gneisenaustraße">+48.1785234 +11.5291563</from>
+      <to junction_name="Pelkovenstraße">+48.1820748 +11.5297516</to>
+    </location>
+  </message>
+</navit_messages>
