@@ -20,7 +20,7 @@ builddir=$buildroot/linux-builddir
 # The directory in which the compiled Navit binary will be found.
 # In most cases this does not need to be modified.
 #bindir=$builddir/navit
-bindir=$HOME/workspaces/navit/navit-linux/navit
+bindir=$HOME/src/navit/build/Debug/navit
 
 # The Navit configuration file to use.
 # Leave this empty to use the default Navit config in bindir.
@@ -103,6 +103,12 @@ do
     fi
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.traffic_export string:"$datadir/traffic-map-$testcase.gpx" >/dev/null
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-2-partial-update.gpx" >/dev/null
+
+    # check for presence of message IDs in message store and GPX
+    grep "id=" /tmp/$testcase.xml | sed "s/.*id=\"\([^\"]*\)\".*/\1/" | while read msgid;
+    do
+        grep "id=\"$msgid\"" $bindir/traffic.xml > /dev/null && { grep "<rte><type>.*</type><name>$msgid</name>" $datadir/traffic-map-$testcase.gpx > /dev/null || echo "*** Message $msgid has no associated segments!"; } || echo "*** Message $msgid not found in persistent storage!"
+    done
 	
 	# set destination again to force route recalculation
 	echo "Setting destination to force full route recalculation..."
