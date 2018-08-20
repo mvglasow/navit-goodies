@@ -61,17 +61,19 @@ fi
 # give Navit time to start up
 #sleep 10
 
-# update external entities for timestamps
-echo -e '<!ENTITY now "'`date -Iseconds`'">\n<!ENTITY later "'`date -Iseconds --date="20 minutes"`'">\n' > traffic_entities.xml.inc
-
 while read testcase lng lat dlng dlat;
 do
 	# skip comment and empty lines
 	[[ "$testcase" =~ \#.* ]] && continue
 	[[ -z $testcase ]] && continue
 	
+    # update external entities for timestamps
+    now=`date -Iseconds`
+    later=`date -Iseconds --date="20 minutes"`
+    echo -e "<!ENTITY now \"$now\">\n<!ENTITY later \"$later\">\n" > traffic_entities.xml.inc
+
+    # prepare feed with current timestamps
 	xmlstarlet c14n $testcase.xml  > /tmp/$testcase.xml
-	xmlstarlet c14n $testcase-cancel.xml  > /tmp/$testcase-cancel.xml
 
 	echo -e "\nTesting $testcase\nSetting position and destination..."
 	# set start and destination
@@ -126,6 +128,13 @@ do
 	
 	# inject cancellation messages
 	echo "Setting cancellation for traffic feed..."
+    echo -e "<feed>" > /tmp/$testcase-cancel.xml
+    grep "id=" /tmp/$testcase.xml | sed "s/.*id=\"\([^\"]*\)\".*/\1/" | while read msgid;
+    do
+        echo -e "  <message id=\"$msgid\" cancellation=\"true\" receive_time=\"$now\" update_time=\""`date -Iseconds`"\" expiration_time=\""`date -Iseconds --date="20 minutes"`"\">\n  </message>" >> /tmp/$testcase-cancel.xml
+    done
+    echo -e "</feed>" >> /tmp/$testcase-cancel.xml
+
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.traffic_inject string:"/tmp/$testcase-cancel.xml" >/dev/null
 	# wait until route calculation is complete
 	#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
