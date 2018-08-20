@@ -1,0 +1,44 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<feed>
+  <message id="tmc:d.1.7:d.1.11023.n.7" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A33">
+      <at junction_name="Paderborn-Zentrum" junction_ref="27">+51.704899 +8.704950</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10498.p.7" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="MOTORWAY" road_ref="A2">
+      <at junction_name="Bad Nenndorf" junction_ref="38">+52.334202 +9.408400</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11829.n.7.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A59">
+      <at junction_name="Düsseldorf-Süd" junction_ref="21">+51.189949 +6.869550</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_CONNECTING_CARRIAGEWAY"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11023.n.7.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A33">
+      <at junction_name="Paderborn-Zentrum" junction_ref="27">+51.704899 +8.704950</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
+      </event>
+    </events>
+  </message>
+</feed>
+

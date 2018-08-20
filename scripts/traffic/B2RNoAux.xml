@@ -1,0 +1,21 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<feed>
+  <message id="tmc:d.1.15:d.1.22678.p.2,5,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_ref="B2R" road_name="Mittlerer Ring">
+      <from junction_name="Innsbrucker-Ring-Tunnel">+48.129501 +11.615400</from>
+      <to junction_name="Prinzregentenstraße">+48.138149 +11.614700</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_PROBLEM">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_LEFT_LANE"/>
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_CONSTRUCTION_WORK">
+      </event>
+    </events>
+  </message>
+</feed>

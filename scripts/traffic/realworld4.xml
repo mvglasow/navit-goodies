@@ -1,0 +1,337 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<feed>
+  <message id="tmc:4.9.0:4.9.10427.p.1,5" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <from junction_name="Sissach" junction_ref="11">+47.469002 +7.795700</from>
+      <to junction_name="Diegten" junction_ref="12">+47.403000 +7.807700</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_VEHICLE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_BLOCKED">
+        <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10060.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <from junction_name="Schweizerhalle-Tunnel">+47.530399 +7.663400</from>
+      <to junction_name="Verzweigung Hagnau" junction_ref="6">+47.541351 +7.630050</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.1771.p.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="MOTORWAY" road_ref="A19" road_name="Palermo-Catania">
+      <from junction_name="Enna">+37.578369 +14.301190</from>
+      <to junction_name="Caltanissetta-Imera">+37.547562 +14.143240</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CONTRAFLOW">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.20694.n.1,5,12.2" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="H11" road_name="Hauptstrasse">
+      <from junction_name="Le Sépey">+46.361000 +7.049450</from>
+      <to junction_name="La Comballaz">+46.377750 +7.081400</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_PROBLEM">
+      </event>
+      <event class="HAZARD" type="HAZARD_LANDSLIPS">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_SINGLE_ALTERNATE_LINE_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.2174.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A24" road_name="Tratto Urbano A24">
+      <from junction_name="Portonaccio - Galla Placidia">+41.899578 +12.541320</from>
+      <to junction_name="Tangenziale Est">+41.901451 +12.531270</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_RUBBERNECKING">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.12538.p.5" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_name="Autoverlad Oberalp">
+      <at junction_name="Andermatt">+46.636902 +8.593550</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10041.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1">
+      <from junction_name="Wangen an der Aare" junction_ref="42">+47.241600 +7.650100</from>
+      <to junction_name="Verzweigung Härkingen" junction_ref="45">+47.312500 +7.807300</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.1135.p.4" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1" road_name="Milano-Napoli">
+      <at junction_name="Modena Sud">+44.578400 +10.982840</at>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_VEHICLE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10490.p.8,11" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A22">
+      <at junction_name="Liestal-Süd">+47.480400 +7.747450</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.34805.p.9" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="SP11(SO)" road_name="della Val Masino">
+      <at junction_name="Tartano">+46.105652 +9.680530</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+        <supplementary_info class="VEHICLE" type="S_VEHICLE_MOTOR"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.1388.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A4" road_name="Torino-Trieste">
+      <from junction_name="Allacciamento A23 Palmanova-Tarvisio">+45.896599 +13.286130</from>
+      <to junction_name="Palmanova">+45.893059 +13.305740</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_ACCIDENT">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.1156.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1" road_name="Milano-Napoli">
+      <from junction_name="Valdarno">+43.547901 +11.558600</from>
+      <to junction_name="Arezzo">+43.438869 +11.774980</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_VEHICLE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.27400.p.1,5" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1">
+      <from junction_name="Aarau-Ost" junction_ref="50">+47.390999 +8.132300</from>
+      <to junction_name="Kölliken-Nord">+47.329659 +8.030410</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_ACCIDENT">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_BLOCKED">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.1160.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1" road_name="Milano-Napoli">
+      <from junction_name="Valdarno">+43.547901 +11.558600</from>
+      <to junction_name="Valdichiana">+43.211929 +11.808870</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE" length="1000">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.34819.p.9" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="SP16(SO)" road_name="Orobica">
+      <at junction_name="SP16dirA-Colorina">+46.157902 +9.742760</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+        <supplementary_info class="VEHICLE" type="S_VEHICLE_MOTOR"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10362.n.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A13">
+      <at junction_name="S. Bernardino-Pass" junction_ref="32">+46.528801 +9.191050</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.1729.n.4" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A16" road_name="Napoli-Canosa">
+      <from junction_name="Baiano">+40.939892 +14.618720</from>
+      <to junction_name="Avellino Ovest">+40.914021 +14.751590</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_VEHICLE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.7458.p.9.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="TRUNK" road_ref="SS117" road_name="Bis Centrale Sicula">
+      <from junction_name="Grottacalda">+37.465309 +14.360100</from>
+      <to junction_name="Bivio Ramata/Innesto Ss561 Pergusina">+37.490559 +14.301080</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED_AHEAD">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.1131.p.12" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1" road_name="Milano-Napoli">
+      <at junction_name="Reggio Emilia">+44.728741 +10.630690</at>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_SHED_LOAD">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.1937.n.4" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A26" road_name="Genova Voltri-Gravellona Toce">
+      <from junction_name="Turchino">+44.454639 +8.744710</from>
+      <to junction_name="Masone">+44.504410 +8.705600</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_VEHICLE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10460.p.1,20.2" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <from junction_name="Wassen" junction_ref="39">+46.705650 +8.601500</from>
+      <to junction_name="Göschenen" junction_ref="40">+46.674850 +8.593450</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC" length="3000">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10428.p.8,11" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <at junction_name="Eptingen" junction_ref="13">+47.381901 +7.817200</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_LONGTERM_ROADWORKS">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_CONSTRUCTION_WORK">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10284.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1">
+      <from junction_name="Verzweigung Limmattal" junction_ref="59">+47.411598 +8.428750</from>
+      <to junction_name="Affoltern" junction_ref="61">+47.426350 +8.493250</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10275.n.1,8" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <from junction_name="Quinto" junction_ref="42">+46.500851 +8.726850</from>
+      <to junction_name="Airolo" junction_ref="41">+46.526001 +8.614900</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.8733.p.5.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="TRUNK" road_ref="SS213" road_name="Via Flacca">
+      <at junction_name="Bivio Per Gaeta">+41.209900 +13.549030</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_SINGLE_ALTERNATE_LINE_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.12539.p.5" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_name="Autoverlad Oberalp">
+      <at junction_name="Sedrun">+46.681301 +8.769600</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10284.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1">
+      <from junction_name="Verzweigung Zürich-Nord" junction_ref="63">+47.423248 +8.573500</from>
+      <to junction_name="Affoltern" junction_ref="61">+47.426350 +8.493250</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:5.1.1:5.1.9838.p.11.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="TRUNK" road_ref="SS305" road_name="Di Redipuglia">
+      <from junction_name="Gradisca D'isonzo/Incrocio Ss252 Di Palmanova">+45.892071 +13.476720</from>
+      <to junction_name="Mariano Del Friuli">+45.915180 +13.458810</to>
+    </location>
+    <events>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_CONSTRUCTION_WORK">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10002.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3" road_name="Westumfahrung Zürich">
+      <from junction_name="Urdorf-Nord" junction_ref="27">+47.394299 +8.417600</from>
+      <to junction_name="Verzweigung Limmattal" junction_ref="59">+47.411598 +8.428750</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+    </events>
+  </message>
+</feed>

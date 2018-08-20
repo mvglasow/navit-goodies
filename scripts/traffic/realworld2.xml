@@ -1,0 +1,1185 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<feed>
+  <message id="tmc:d.1.15:d.1.31795.n.3" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A93">
+      <from junction_name="Pentling">+48.958801 +12.093100</from>
+      <to junction_name="Regensburg Prüfening">+49.018700 +12.067850</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_ACCIDENT">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11121.p.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A4">
+      <from junction_name="Refrath" junction_ref="18">+50.948200 +7.098000</from>
+      <to junction_name="Köln-Ost" junction_ref="16">+50.952400 +7.036700</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.31750.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A9">
+      <from junction_name="Trockau" junction_ref="43">+49.825901 +11.499400</from>
+      <to junction_name="Bindlacher Berg" junction_ref="40b">+50.015301 +11.605400</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.43121.p.5,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="PRIMARY" road_ref="B20">
+      <from junction_name="Traitsching">+49.152901 +12.645500</from>
+      <to junction_name="Rißmannsdorf">+49.087502 +12.640300</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_RESURFACING_WORK">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12272.p.12" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A7">
+      <from junction_name="Aalen/Westhausen" junction_ref="114">+48.884899 +10.165200</from>
+      <to junction_name="Aalen/Oberkochen" junction_ref="115">+48.806301 +10.210850</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_OBJECT_ON_ROAD">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.11910.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A6">
+      <from junction_name="Neuendettelsau" junction_ref="54">+49.305000 +10.792700</from>
+      <to junction_name="Schwabach-Süd" junction_ref="56">+49.320801 +11.044500</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10953.p.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A30">
+      <at junction_name="Lotte/Osnabrück" junction_ref="14">+52.268200 +7.926900</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_CONNECTING_CARRIAGEWAY"/>
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.22690.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_ref="B2R" road_name="Mittlerer Ring">
+      <from junction_name="Grünwalder Straße">+48.111698 +11.576200</from>
+      <to junction_name="München-Sendling-Süd">+48.110901 +11.518500</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10909.n.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3" road_name="Kölner Ring">
+      <at junction_name="Köln-Ost" junction_ref="27">+50.952400 +7.036700</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_CONNECTING_CARRIAGEWAY"/>
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11839.p.8,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A59">
+      <at junction_name="Duisburg-Meiderich" junction_ref="7">+51.469650 +6.765600</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.23853.n.5,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="B472">
+      <from junction_name="Sindelsdorf">+47.728100 +11.325400</from>
+      <to junction_name="B 11 bei Bad Heilbrunn">+47.730499 +11.432600</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_RESURFACING_WORK">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.10794.n.12" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3">
+      <from junction_name="Passau-Mitte" junction_ref="116">+48.563999 +13.384600</from>
+      <to junction_name="Passau-Nord" junction_ref="115">+48.605499 +13.369700</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_OBJECT_ON_ROAD">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12276.p.14" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A7">
+      <from junction_name="Feuchtwangen-West" junction_ref="111">+49.173599 +10.246600</from>
+      <to junction_name="Dinkelsbühl/Fichtenau" junction_ref="112">+49.093849 +10.210250</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_BAD_ROAD">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10252.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A11">
+      <from junction_name="Bernau-Nord" junction_ref="15">+52.691898 +13.557600</from>
+      <to junction_name="Barnim" junction_ref="17">+52.613998 +13.558600</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10292.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A115" road_name="Autobahnzubringer Magdeburg">
+      <from junction_name="Potsdam-Drewitz" junction_ref="5a">+52.352650 +13.140700</from>
+      <to junction_name="Nuthetal" junction_ref="7">+52.300201 +13.083500</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12273.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A7">
+      <from junction_name="Aalen/Oberkochen" junction_ref="115">+48.806301 +10.210850</from>
+      <to junction_name="Aalen/Westhausen" junction_ref="114">+48.884899 +10.165200</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC" length="10000">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.23789.n.3,5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="B470">
+      <from junction_name="Bad Windsheim">+49.447601 +10.250500</from>
+      <to junction_name="B13 bei Illesheim">+49.469002 +10.354500</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_ACCIDENT">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.10848.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3">
+      <from junction_name="Würzburg-West" junction_ref="68">+49.747700 +9.818450</from>
+      <to junction_name="Würzburg-Heidingsfeld" junction_ref="70">+49.752701 +9.928500</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12867.p.4" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A93">
+      <from junction_name="Regenstauf" junction_ref="37">+49.118900 +12.105650</from>
+      <to junction_name="Regensburg-Nord" junction_ref="38">+49.043400 +12.096300</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_HGV">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.21599.n.5,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="PRIMARY" road_ref="B20">
+      <from junction_name="Rißmannsdorf">+49.087502 +12.640300</from>
+      <to junction_name="Traitsching">+49.152901 +12.645500</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_RESURFACING_WORK">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11415.n.7" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A45">
+      <at junction_name="Olpe-Süd" junction_ref="19">+50.988201 +7.835950</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_CONNECTING_CARRIAGEWAY"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12732.p.4" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A9">
+      <from junction_name="Pfaffenhofen a.d.Ilm" junction_ref="66">+48.504601 +11.589500</from>
+      <to junction_name="Allershausen" junction_ref="67">+48.429001 +11.589300</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_HGV">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.21524.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="PRIMARY" road_ref="B2">
+      <from junction_name="Michendorf-Nord">+52.329048 +13.039300</from>
+      <to junction_name="Michendorf">+52.299999 +13.025600</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11439.n.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A46">
+      <at junction_name="Hückelhoven-Ost" junction_ref="7">+51.067348 +6.235700</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11220.n.1,5,20" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A40">
+      <from junction_name="Duisburg-Rheinhausen" junction_ref="10">+51.437351 +6.672450</from>
+      <to junction_name="Duisburg-Häfen" junction_ref="12">+51.435452 +6.750050</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC" length="3000">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11971.n.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A61">
+      <at junction_name="Alzey" junction_ref="54">+49.775150 +8.110700</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_EXIT_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.12977.n.1,3" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A99" road_name="Autobahnring München">
+      <from junction_name="München-West" junction_ref="8">+48.180698 +11.433200</from>
+      <to junction_name="München-Feldmoching" junction_ref="11">+48.226200 +11.541900</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_INVESTIGATION">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10642.n.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="MOTORWAY" road_ref="A24">
+      <from junction_name="Hamburg-Horn" junction_ref="1">+53.559052 +10.070050</from>
+      <to junction_name="Hamburg-Ost" junction_ref="3">+53.561501 +10.165200</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12292.n.11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A7">
+      <from junction_name="Schweinfurt/Werneck" junction_ref="99">+50.001598 +10.078500</from>
+      <to junction_name="Wasserlosen" junction_ref="98">+50.065300 +10.046000</to>
+    </location>
+    <events>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11455.p.8" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A46">
+      <at junction_name="Düsseldorf-Eller" junction_ref="26">+51.190201 +6.858200</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12538.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A8">
+      <from junction_name="Am Kornberg">+48.607700 +9.631350</from>
+      <to junction_name="Merklingen" junction_ref="61">+48.518299 +9.760900</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11269.p.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A42">
+      <at junction_name="Essen-Altenessen" junction_ref="14">+51.508099 +7.013650</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10218.n.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A100" road_name="Stadtring Berlin">
+      <from junction_name="Beusselstraße" junction_ref="2">+52.538250 +13.326150</from>
+      <to junction_name="Jakob-Kaiser-Platz" junction_ref="3">+52.533699 +13.294100</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_LEFT_LANE"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.41414.p.2,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="MOTORWAY" road_ref="A7">
+      <from junction_name="Dinkelsbühl/Fichtenau" junction_ref="112">+49.093849 +10.210250</from>
+      <to junction_name="Virngrundtunnel">+49.022049 +10.196850</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_PROBLEM">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_CONSTRUCTION_WORK">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_NEW_ROADWORKS_LAYOUT">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12745.n.4" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A9">
+      <from junction_name="Altmühltal" junction_ref="58">+48.998600 +11.369900</from>
+      <to junction_name="Greding" junction_ref="57">+49.042198 +11.349100</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_HGV">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11117.n.1,20" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A4" road_name="Kölner Ring">
+      <from junction_name="Köln-Klettenberg" junction_ref="11a">+50.898449 +6.909450</from>
+      <to junction_name="Köln-Süd" junction_ref="12">+50.885448 +6.968250</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE" length="4000">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11121.p.7" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A4">
+      <at junction_name="Köln-Ost" junction_ref="16">+50.952400 +7.036700</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_CONNECTING_CARRIAGEWAY"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12979.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A99" road_name="Autobahnring München">
+      <from junction_name="München-Neuherberg" junction_ref="12a">+48.228500 +11.586400</from>
+      <to junction_name="München-Nord" junction_ref="13">+48.221298 +11.629300</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC" length="4000">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10538.p.4,5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <from junction_name="Burg-Zentrum" junction_ref="73">+52.225800 +11.821850</from>
+      <to junction_name="Lostau" junction_ref="72">+52.222301 +11.717850</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_HGV">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.23789.n.1,5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="B470">
+      <from junction_name="Bad Windsheim">+49.447601 +10.250500</from>
+      <to junction_name="B13 bei Illesheim">+49.469002 +10.354500</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE" length="1000">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_ACCIDENT">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10909.p.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3" road_name="Kölner Ring">
+      <at junction_name="Köln-Ost" junction_ref="27">+50.952400 +7.036700</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_CONNECTING_CARRIAGEWAY"/>
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12758.p.12" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A9">
+      <from junction_name="Weidensees" junction_ref="45">+49.706200 +11.467600</from>
+      <to junction_name="Hormersdorf" junction_ref="47">+49.620899 +11.407900</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_OBJECT_ON_ROAD">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10096.n.1,5,20" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1" road_name="Hansalinie">
+      <from junction_name="Lotte/Osnabrück" junction_ref="72">+52.268200 +7.926900</from>
+      <to junction_name="Osnabrück-Hafen" junction_ref="71">+52.303398 +7.944400</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_QUEUE" length="2000">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11339.n.1,5,20" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A44">
+      <from junction_name="Düsseldorf-Nord" junction_ref="32">+51.286701 +6.804100</from>
+      <to junction_name="Ratingen-Schwarzbach" junction_ref="33">+51.286152 +6.870750</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_REDUCED_LANES">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_QUEUE" length="4000">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.60923.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_ref="B2R" road_name="Mittlerer Ring">
+      <from junction_name="Dietlindenstraße">+48.163601 +11.596150</from>
+      <to junction_name="Richard-Strauss-Tunnel">+48.144798 +11.615750</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12293.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A7">
+      <from junction_name="Schweinfurt/Werneck" junction_ref="99">+50.001598 +10.078500</from>
+      <to junction_name="Hammelburg" junction_ref="97">+50.124199 +9.958750</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.11914.n.3" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A6">
+      <from junction_name="Nürnberg-Langwasser" junction_ref="59">+49.391300 +11.170000</from>
+      <to junction_name="Nürnberg-Ost" junction_ref="60">+49.395699 +11.199900</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_HGV_ACCIDENT">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.31620.n.11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A99" road_name="Autobahnring München">
+      <at junction_name="Allach">+48.207001 +11.461000</at>
+    </location>
+    <events>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+        <supplementary_info class="POSITION" type="S_POSITION_SHOULDER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10498.p.7" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="MOTORWAY" road_ref="A2">
+      <at junction_name="Bad Nenndorf" junction_ref="38">+52.334202 +9.408400</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.8055.p.5,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A96">
+      <from junction_name="Stetten" junction_ref="18">+48.032799 +10.441000</from>
+      <to junction_name="Erkheim" junction_ref="16">+48.027901 +10.325250</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_SHOULDER"/>
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_MAINTENANCE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.33783.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A10" road_name="Südlicher Berliner Ring">
+      <from junction_name="Nuthetal" junction_ref="16">+52.300201 +13.083500</from>
+      <to junction_name="Michendorf-Süd">+52.302601 +13.016500</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.35321.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_ref="B2R" road_name="Mittlerer Ring">
+      <from junction_name="Effnertunnel">+48.152550 +11.614300</from>
+      <to junction_name="Biedersteinertunnel">+48.165600 +11.596350</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.35321.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_ref="B2R" road_name="Mittlerer Ring">
+      <from junction_name="Effnertunnel">+48.152550 +11.614300</from>
+      <to junction_name="Biedersteinertunnel">+48.165600 +11.596350</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11839.n.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A59">
+      <at junction_name="Duisburg-Meiderich" junction_ref="7">+51.469650 +6.765600</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_EXIT_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10209.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A10" road_name="Westlicher Berliner Ring">
+      <from junction_name="Werder" junction_ref="21">+52.334801 +12.814650</from>
+      <to junction_name="Groß Kreutz" junction_ref="22">+52.393700 +12.835000</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11212.n.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A40">
+      <at junction_name="Kempen" junction_ref="5">+51.408401 +6.419250</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_EXIT_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11023.n.7" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A33">
+      <at junction_name="Paderborn-Zentrum" junction_ref="27">+51.704899 +8.704950</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11858.n.1,20" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A6">
+      <from junction_name="Homburg" junction_ref="9">+49.341850 +7.301600</from>
+      <to junction_name="Waldmohr" junction_ref="10">+49.371349 +7.365600</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC" length="3000">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.10800.n.12" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3">
+      <from junction_name="Deggendorf" junction_ref="110">+48.818501 +12.939900</from>
+      <to junction_name="Metten" junction_ref="109">+48.848499 +12.891900</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_OBJECT_ON_ROAD">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10775.p.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A29" road_name="Jadelinie">
+      <from junction_name="Zetel" junction_ref="7">+53.447102 +8.025700</from>
+      <to junction_name="Varel/Bockhorn" junction_ref="8">+53.396702 +8.103700</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.25609.p.25" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="PRIMARY" road_ref="B96a" road_name="Köpenicker Landstraße">
+      <at junction_name="Baumschulenstraße">+52.469101 +13.491300</at>
+    </location>
+    <events>
+      <event class="EQUIPMENT_STATUS" type="EQUIPMENT_STATUS_TRAFFIC_LIGHTS_NOT_WORKING">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.25334.n.5,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="B85">
+      <from junction_name="Schwandorf-Nord">+49.343300 +12.149900</from>
+      <to junction_name="Kreith">+49.348598 +12.074900</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_BRIDGE_MAINTENANCE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.10805.n.2,5,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3">
+      <from junction_name="Bogen" junction_ref="107">+48.921501 +12.732600</from>
+      <to junction_name="Kirchroth" junction_ref="105">+48.959702 +12.542500</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_CONTRAFLOW">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_LONGTERM_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11261.n.1,5,11,20" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A42">
+      <from junction_name="Duisburg-Baerl" junction_ref="3">+51.481602 +6.670800</from>
+      <to junction_name="Duisburg-Nord" junction_ref="6">+51.483349 +6.770650</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_RESURFACING_WORK">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_QUEUE" length="3000">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.32247.n.3" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="PRIMARY" road_ref="B17">
+      <from junction_name="Kinsau">+47.879700 +10.892200</from>
+      <to junction_name="Denklingen">+47.914501 +10.874700</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_ACCIDENT">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12895.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A93">
+      <from junction_name="Thiersheim" junction_ref="11">+50.074600 +12.102100</from>
+      <to junction_name="Höchstädt" junction_ref="10">+50.103199 +12.094500</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC" length="3000">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11472.p.7" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A46">
+      <at junction_name="Hagen" junction_ref="42">+51.368851 +7.516700</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_CONNECTING_CARRIAGEWAY"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10841.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3">
+      <from junction_name="Rottendorf" junction_ref="72">+49.769199 +10.068900</from>
+      <to junction_name="Wiesentheid" junction_ref="75">+49.775200 +10.346300</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC" length="10000">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10971.n.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A30">
+      <at junction_name="Löhne" junction_ref="31">+52.202202 +8.745900</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_EXIT_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11829.n.7" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A59">
+      <at junction_name="Düsseldorf-Süd" junction_ref="21">+51.189949 +6.869550</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_CONNECTING_CARRIAGEWAY"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.35333.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_ref="B2R" road_name="Mittlerer Ring">
+      <from junction_name="Dachauer Straße">+48.165901 +11.537900</from>
+      <to junction_name="Trappentreutunnel">+48.132549 +11.532250</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12770.n.1,4,5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A9">
+      <at junction_name="Gefrees" junction_ref="37">+50.095402 +11.693800</at>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_PROBLEM">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_HGV">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_BLOCKED">
+        <supplementary_info class="POSITION" type="S_POSITION_SHOULDER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12901.n.12" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A94">
+      <from junction_name="München-Daglfing" junction_ref="3">+48.139099 +11.662100</from>
+      <to junction_name="Feldkirchen-West" junction_ref="6">+48.141998 +11.709300</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_OBJECT_ON_ROAD">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12977.n.1,3" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A99" road_name="Autobahnring München">
+      <from junction_name="München-West" junction_ref="8">+48.180698 +11.433200</from>
+      <to junction_name="München-Feldmoching" junction_ref="11">+48.226200 +11.541900</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_INVESTIGATION">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.31424.p.3,5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A73">
+      <from junction_name="Eisfeld-Süd" junction_ref="6">+50.389801 +10.917200</from>
+      <to junction_name="Coburg" junction_ref="7">+50.291302 +10.980200</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_INVESTIGATION">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_BLOCKED">
+        <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.8055.p.5,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A96">
+      <from junction_name="Stetten" junction_ref="18">+48.032799 +10.441000</from>
+      <to junction_name="Erkheim" junction_ref="16">+48.027901 +10.325250</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_SHOULDER"/>
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_MAINTENANCE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10484.n.7" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <at junction_name="Ostwestfalen/Lippe" junction_ref="28">+52.057999 +8.659250</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12863.p.13" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="MOTORWAY" road_ref="A93">
+      <from junction_name="Regensburg Prüfening">+49.018700 +12.067850</from>
+      <to junction_name="Regensburg-Königswiesen" junction_ref="42">+49.010399 +12.061200</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_CYCLISTS_ON_ROAD">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.10829.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3">
+      <from junction_name="Erlangen-West" junction_ref="81">+49.628502 +10.918200</from>
+      <to junction_name="Nürnberg-Nord" junction_ref="85">+49.499802 +11.134000</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12674.n.12" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="MOTORWAY" road_ref="A81">
+      <from junction_name="Weinsberg/Ellhofen" junction_ref="10">+49.137051 +9.305400</from>
+      <to junction_name="Boxberg" junction_ref="5">+49.469551 +9.558850</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_SUBSIDENCE">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12749.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A9">
+      <from junction_name="Hilpoltstein" junction_ref="56">+49.162102 +11.263900</from>
+      <to junction_name="Nürnberg/Feucht" junction_ref="54">+49.349400 +11.203600</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12896.n.1,3,4,5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A93">
+      <from junction_name="Höchstädt" junction_ref="10">+50.103199 +12.094500</from>
+      <to junction_name="Selb-West" junction_ref="9">+50.167702 +12.107200</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_INVESTIGATION">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_RESCUE">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12946.n.3" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A96">
+      <from junction_name="Buchloe-Ost" junction_ref="23">+48.035801 +10.746400</from>
+      <to junction_name="Landsberg am Lech-West" junction_ref="24">+48.048351 +10.837750</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_ACCIDENT">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.60598.n.3,5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A9">
+      <from junction_name="Neufahrn" junction_ref="68">+48.316399 +11.620800</from>
+      <to junction_name="Fürholzen (West)">+48.338200 +11.607750</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_MULTI_VEHICLE_ACCIDENT">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_BLOCKED">
+        <supplementary_info class="POSITION" type="S_POSITION_MIDDLE_LANE"/>
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_BLOCKED">
+        <supplementary_info class="POSITION" type="S_POSITION_LEFT_LANE"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10978.p.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="MOTORWAY" road_ref="A31">
+      <at junction_name="Gladbeck" junction_ref="41">+51.585602 +6.938750</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11339.n.8" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A44">
+      <at junction_name="Ratingen-Schwarzbach" junction_ref="33">+51.286152 +6.870750</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11442.n.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A46">
+      <at junction_name="Mönchengladbach-Wanlo" junction_ref="10">+51.102551 +6.425700</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_CONNECTING_CARRIAGEWAY"/>
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10930.p.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3">
+      <at junction_name="Dinslaken-Nord" junction_ref="8">+51.588200 +6.784600</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_EXIT_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11838.n.8,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A59">
+      <at junction_name="Duisburg-Ruhrort" junction_ref="8">+51.462551 +6.769550</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.12957.n.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A96">
+      <from junction_name="Inning a. Ammersee" junction_ref="30">+48.084702 +11.151700</from>
+      <to junction_name="Germering-Süd" junction_ref="34">+48.117199 +11.383600</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_LEFT_LANE"/>
+      </event>
+      <event class="HAZARD" type="HAZARD_SLOW_MOVING_MAINTENANCE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.32736.p.3,4" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="PRIMARY" road_ref="B5" road_name="Unter den Linden">
+      <at junction_name="Friedrichstraße">+52.516998 +13.388850</at>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_ACCIDENT">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_RESCUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.10059.n.7" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1" road_name="Kölner Ring">
+      <at junction_name="Leverkusen-West" junction_ref="99">+51.035999 +6.964200</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CARRIAGEWAY_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_CONNECTING_CARRIAGEWAY"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.12153.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="PRIMARY" road_ref="B158" road_name="Dorfstraße">
+      <from junction_name="Berlin-Hohenschönhausen">+52.600899 +13.606850</from>
+      <to junction_name="Märkische Allee">+52.573700 +13.568300</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11995.p.1,20" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A61">
+      <from junction_name="Niederzissen" junction_ref="32">+50.467701 +7.231850</from>
+      <to junction_name="Wehr" junction_ref="33">+50.408150 +7.234850</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE" length="2000">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.43935.n.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A143" road_name="Westumfahrung Halle">
+      <at junction_name="Teutschenthal">+51.451698 +11.862900</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_EXIT_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_CONSTRUCTION_WORK">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.12839.n.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A92">
+      <from junction_name="Plattling-West" junction_ref="22">+48.791500 +12.835300</from>
+      <to junction_name="Plattling-Nord" junction_ref="23">+48.797199 +12.904550</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_BLOCKED">
+        <supplementary_info class="POSITION" type="S_POSITION_SHOULDER"/>
+      </event>
+      <event class="INCIDENT" type="INCIDENT_ACCIDENT">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.12483.n.1,5,20" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A8">
+      <from junction_name="Merzig" junction_ref="6">+49.442001 +6.624500</from>
+      <to junction_name="Rehlingen" junction_ref="7">+49.364399 +6.694600</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_REDUCED_LANES">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC" length="2000">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.54096.n.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A26">
+      <from junction_name="Stade-Süd">+53.581699 +9.500750</from>
+      <to junction_name="Horneburg">+53.514702 +9.594600</to>
+    </location>
+    <events>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.11339.n.7" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A44">
+      <at junction_name="Ratingen-Schwarzbach" junction_ref="33">+51.286152 +6.870750</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_EXIT_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12538.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A8">
+      <from junction_name="Oberelchingen" junction_ref="64">+48.456902 +10.076300</from>
+      <to junction_name="Merklingen" junction_ref="61">+48.518299 +9.760900</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.39771.p.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A33">
+      <at junction_name="Borgholzhausen" junction_ref="15">+52.078098 +8.245450</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_EXIT_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.12017.n.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A61">
+      <from junction_name="Jackerath" junction_ref="16">+51.036549 +6.460900</from>
+      <to junction_name="Mönchengladbach-Wanlo" junction_ref="15">+51.102551 +6.425700</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.10825.n.12" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3">
+      <from junction_name="Oberölsbach" junction_ref="91">+49.361801 +11.424800</from>
+      <to junction_name="Altdorf" junction_ref="89">+49.404099 +11.299000</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_OBJECT_ON_ROAD">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.7:d.1.43682.p.14" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="PRIMARY" road_ref="B80" road_name="Eislebener Chaussee">
+      <at junction_name="Rennbahnring">+51.480850 +11.950600</at>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_OIL_ON_ROAD">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+</feed>

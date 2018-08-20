@@ -1,0 +1,18 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<feed>
+  <message id="tmc:d.1.15:d.1.43121.p.5,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="PRIMARY" road_ref="B20">
+      <from junction_name="Traitsching">+49.152901 +12.645500</from>
+      <to junction_name="Rißmannsdorf">+49.087502 +12.640300</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_RESURFACING_WORK">
+      </event>
+    </events>
+  </message>
+</feed>

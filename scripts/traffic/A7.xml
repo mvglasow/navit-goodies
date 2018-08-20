@@ -1,0 +1,20 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<feed>
+  <message id="tmc:d.1.15:d.1.41414.p.2,11.2" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="MOTORWAY" road_ref="A7">
+      <from junction_name="Dinkelsbühl/Fichtenau" junction_ref="112">+49.093849 +10.210250</from>
+      <to junction_name="Virngrundtunnel">+49.022049 +10.196850</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_PROBLEM">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_CONSTRUCTION_WORK">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_NEW_ROADWORKS_LAYOUT">
+      </event>
+    </events>
+  </message>
+</feed>

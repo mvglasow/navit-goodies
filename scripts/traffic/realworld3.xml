@@ -1,0 +1,254 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<feed>
+  <message id="tmc:4.9.0:4.9.11246.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3">
+      <from junction_name="Basel-Kannenfeld" junction_ref="2">+47.575550 +7.562600</from>
+      <to junction_name="Basel-St-Louis">+47.576389 +7.561640</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.12538.p.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_name="Autoverlad Oberalp">
+      <at junction_name="Andermatt">+46.636902 +8.593550</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10275.n.8" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <at junction_name="Airolo" junction_ref="41">+46.526001 +8.614900</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10460.p.1,20.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <from junction_name="Amsteg" junction_ref="38">+46.772099 +8.668100</from>
+      <to junction_name="Göschenen" junction_ref="40">+46.674850 +8.593450</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC" length="6000">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.11229.n.1.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A9">
+      <from junction_name="St-Maurice" junction_ref="20">+46.201050 +7.015200</from>
+      <to junction_name="Relais du Grand-Saint-Bernard">+46.128132 +7.060650</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10124.p.12" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A6">
+      <from junction_name="Thun-Süd" junction_ref="17">+46.742500 +7.602800</from>
+      <to junction_name="Verzweigung Lattigen" junction_ref="18">+46.693401 +7.650800</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_OBJECT_ON_ROAD">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.11221.n.1,20.2" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <from junction_name="Quinto" junction_ref="42">+46.500851 +8.726850</from>
+      <to junction_name="Stalvedro">+46.520500 +8.635250</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC" length="6000">
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10490.p.8,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A22">
+      <at junction_name="Liestal-Süd">+47.480400 +7.747450</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10460.p.8" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <at junction_name="Göschenen" junction_ref="40">+46.674850 +8.593450</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10426.n.1,4,5,20" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <from junction_name="Sissach" junction_ref="11">+47.469002 +7.795700</from>
+      <to junction_name="Arisdorf" junction_ref="10">+47.497501 +7.765200</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_VEHICLE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_HGV">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_BLOCKED">
+        <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
+      </event>
+      <event class="DELAY" type="DELAY_DELAY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10741.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <from junction_name="Schweizerhalle-Tunnel">+47.530399 +7.663400</from>
+      <to junction_name="Basel-Badischer Bahnhof" junction_ref="2">+47.562351 +7.610600</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.26330.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1">
+      <from junction_name="Wallisellen" junction_ref="65">+47.407200 +8.602000</from>
+      <to junction_name="Baltenswil">+47.423962 +8.649690</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10222.p.1,4.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1">
+      <at junction_name="Coppet" junction_ref="10">+46.340050 +6.164400</at>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_PROBLEM">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_HGV">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10362.n.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A13">
+      <at junction_name="S. Bernardino-Pass" junction_ref="32">+46.528801 +9.191050</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10083.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3">
+      <from junction_name="Basel-Kleinhüningen" junction_ref="5">+47.571190 +7.598070</from>
+      <to junction_name="Verzweigung Wiese">+47.574402 +7.599880</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_QUEUE">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10221.p.13" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1">
+      <from junction_name="Verzweigung le Vengeron" junction_ref="9">+46.251801 +6.140750</from>
+      <to junction_name="Grand-Saconnex" junction_ref="7">+46.242748 +6.125350</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_CYCLISTS_ON_ROAD">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.20694.n.1,5,12.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="H11" road_name="Hauptstrasse">
+      <from junction_name="Le Sépey">+46.361000 +7.049450</from>
+      <to junction_name="La Comballaz">+46.377750 +7.081400</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_PROBLEM">
+      </event>
+      <event class="HAZARD" type="HAZARD_LANDSLIPS">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_SINGLE_ALTERNATE_LINE_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10669.p.1,4,5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A6">
+      <from junction_name="Rubigen" junction_ref="14">+46.890099 +7.539900</from>
+      <to junction_name="Kiesen" junction_ref="15">+46.809898 +7.580500</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_PROBLEM">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_VEHICLE">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_HGV">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.12539.p.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_name="Autoverlad Oberalp">
+      <at junction_name="Sedrun">+46.681301 +8.769600</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10493.p.13" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="MOTORWAY" road_ref="A3">
+      <from junction_name="Effingen" junction_ref="18">+47.482101 +8.097350</from>
+      <to junction_name="Eiken" junction_ref="16">+47.538250 +7.987950</to>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_PEOPLE_ON_ROAD">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:4.9.0:4.9.10428.p.8,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
+      <at junction_name="Eptingen" junction_ref="13">+47.381901 +7.817200</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_LONGTERM_ROADWORKS">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_CONSTRUCTION_WORK">
+      </event>
+    </events>
+  </message>
+</feed>
