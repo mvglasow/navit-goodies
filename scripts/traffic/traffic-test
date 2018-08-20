@@ -136,6 +136,13 @@ do
     else
 	    sleep $sleep
     fi
+
+    # check for presence of message IDs in message store
+    grep "id=" /tmp/$testcase.xml | sed "s/.*id=\"\([^\"]*\)\".*/\1/" | while read msgid;
+    do
+        grep "id=\"$msgid\"" $bindir/traffic.xml > /dev/null && echo "*** Message $msgid is still in persistent storage!"
+    done
+
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-4-cancellation.gpx" >/dev/null
 	echo "$testcase: done"
 done < $testcases
