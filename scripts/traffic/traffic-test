@@ -5,6 +5,9 @@
 # Traffic test data must reside in the current directory, and Navit must be running prior to launching
 # this script.
 
+# BUGS: Makes some assumptions on XML formatting (no line breaks within a tag, double quotes, single space as
+# whitespace) and may break on unexpected (yet formally correct) formats.
+
 # The source dir, into which you checked out the Navit source code.
 srcdir=$HOME/src/navit
 
@@ -107,9 +110,9 @@ do
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-2-partial-update.gpx" >/dev/null
 
     # check for presence of message IDs in message store and GPX
-    grep "id=" /tmp/$testcase.xml | sed "s/.*id=\"\([^\"]*\)\".*/\1/" | while read msgid;
+    grep " id=" /tmp/$testcase.xml | sed "s/.* id=\"\([^\"]*\)\".*/\1/" | while read msgid;
     do
-        grep "id=\"$msgid\"" $bindir/traffic.xml > /dev/null && { grep "<rte><type>.*</type><name>$msgid</name>" $datadir/traffic-map-$testcase.gpx > /dev/null || echo "*** Message $msgid has no associated segments!"; } || echo "*** Message $msgid not found in persistent storage!"
+        grep " id=\"$msgid\"" $bindir/traffic.xml > /dev/null && { grep "<rte><type>.*</type><name>$msgid</name>" $datadir/traffic-map-$testcase.gpx > /dev/null || echo "*** Message $msgid has no associated segments!"; } || echo "*** Message $msgid not found in persistent storage!"
     done
 	
 	# set destination again to force route recalculation
@@ -129,7 +132,7 @@ do
 	# inject cancellation messages
 	echo "Setting cancellation for traffic feed..."
     echo -e "<feed>" > /tmp/$testcase-cancel.xml
-    grep "id=" /tmp/$testcase.xml | sed "s/.*id=\"\([^\"]*\)\".*/\1/" | while read msgid;
+    grep " id=" /tmp/$testcase.xml | sed "s/.* id=\"\([^\"]*\)\".*/\1/" | while read msgid;
     do
         echo -e "  <message id=\"$msgid\" cancellation=\"true\" receive_time=\"$now\" update_time=\""`date -Iseconds`"\" expiration_time=\""`date -Iseconds --date="20 minutes"`"\">\n  </message>" >> /tmp/$testcase-cancel.xml
     done
@@ -147,9 +150,9 @@ do
     fi
 
     # check for presence of message IDs in message store
-    grep "id=" /tmp/$testcase.xml | sed "s/.*id=\"\([^\"]*\)\".*/\1/" | while read msgid;
+    grep " id=" /tmp/$testcase.xml | sed "s/.* id=\"\([^\"]*\)\".*/\1/" | while read msgid;
     do
-        grep "id=\"$msgid\"" $bindir/traffic.xml > /dev/null && echo "*** Message $msgid is still in persistent storage!"
+        grep " id=\"$msgid\"" $bindir/traffic.xml > /dev/null && echo "*** Message $msgid is still in persistent storage!"
     done
 
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-4-cancellation.gpx" >/dev/null
