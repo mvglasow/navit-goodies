@@ -37,7 +37,7 @@ datadir=$HOME/workspaces/navit/testdata
 # This should be a path to a text file containing one line for each test case in the following format:
 # name start_longitude start_latitude dest_longitude dest_latitude
 # Separate parameters with spaces.
-testcases=$HOME/src/navit-goodies/scripts/traffic/traffic-testcases.txt
+testcases=$HOME/src/navit-goodies/scripts/traffic/traffic-route-testcases.txt
 
 
 interactive=0
