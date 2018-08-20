@@ -1,0 +1,50 @@
+# This file contains routing test cases for the traffic-test script.
+# Each line corresponds to one test case and has the following format:
+#
+# name from_lon from_lat to_lon to_lat
+#
+# where:
+# name is the name of the test case. Whitespaces are not allowed, and dashes should be avoided (we use them as field separators in filenames).
+#    The script also expects two files named name.xml and name-cancel.xml, which hold the traffic feed and a feed of cancellation messages.
+# from_lon and from_lat are the start coordinates, in a format accepted by Navit's dbus interface (decimal works). Note that lon is first!
+# to_lon and to_lat are the coordiates for the destination, same rules as above apply.
+#
+# Lines starting with # are comment lines and will be ignored. Empty lines will also be skipped.
+
+
+# Test with real-world feeds (most of which crashed Navit or exhibited some bug)
+realworld1 11.6034150 48.1955644 11.5890849 48.1926900
+realworld2 11.6034150 48.1955644 11.5890849 48.1926900
+realworld3 11.6034150 48.1955644 11.5890849 48.1926900
+realworld4 11.6034150 48.1955644 11.5890849 48.1926900
+realworld5 11.6034150 48.1955644 11.5890849 48.1926900
+realworld6 11.6034150 48.1955644 11.5890849 48.1926900
+
+# Subset of realworld2, exhibited a now-fixed bug
+##Traitsching 11.6034150 48.1955644 11.5890849 48.1926900
+
+# Modified subset of realworld3, test for pass roads but with fully matching ref
+##H11Match 11.6034150 48.1955644 11.5890849 48.1926900
+
+# Subset of realworld5, exhibited a now-fixed bug with bidirectional locations on motorways
+##A7 11.6034150 48.1955644 11.5890849 48.1926900
+
+# Comparison for ring roads with and without auxiliary points
+# compliant format with via point
+B2R 11.6034150 48.1955644 11.5890849 48.1926900
+# via point missing
+B2RNoAux 11.6034150 48.1955644 11.5890849 48.1926900
+# two separate segments
+B2RSeparate 11.6034150 48.1955644 11.5890849 48.1926900
+
+# Hand-generated test cases with real routes
+MunichBayernkaserne 11.6034150 48.1955644 11.5890849 48.1926900
+MunichMoosach 11.5292039 48.1765238 11.5297516 48.1820748
+MunichMoosach2 11.5292039 48.1765238 11.5322446 48.1848094
+Munich_Geisenhausen 11.5219952 48.1268249 11.5937331 48.5539449
+Munich_Stuttgart 11.5219952 48.1268249 9.1898021 48.6901540
+##Landeck_Feldkirch 10.5645747 47.1390545 9.5988119 47.2352486
+##Feldkirch_Landeck 9.5988119 47.2352486 10.5645747 47.1390545
+Oberau_Obsteig 11.1381815 47.5598709 10.9278973 47.2979526
+# same traffic message as above, but reversed route—both pre and post should be the same here!
+Obsteig_Oberau 10.9278973 47.2979526 11.1381815 47.5598709
