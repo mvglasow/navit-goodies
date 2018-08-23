@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# This script runs a test suite of routes and traffic messages and stores their output (with and without
-# traffic messages present) for comparison.
+# This script runs a test suite of traffic messages and stores their output for comparison.
 # Traffic test data must reside in the current directory, and Navit must be running prior to launching
 # this script.
 
@@ -37,16 +36,16 @@ datadir=$HOME/workspaces/navit/testdata
 # This should be a path to a text file containing one line for each test case in the following format:
 # name start_longitude start_latitude dest_longitude dest_latitude
 # Separate parameters with spaces.
-testcases=$HOME/src/navit-goodies/scripts/traffic/traffic-route-testcases.txt
+testcases=$HOME/src/navit-goodies/scripts/traffic/traffic-map-testcases.txt
 
 
 interactive=0
-sleep=5
+sleep=15
 
 if [[ "$1" == "-i" ]]; then
     interactive=1
 elif [[ "$1" == "-l" ]]; then
-    sleep=100
+    sleep=300
 elif [[ -n "$@" ]]; then
     echo "Usage: $0 [-i|-l]"
     echo "-i  Interactive (do not wait but prompt after every step)"
@@ -64,7 +63,7 @@ fi
 # give Navit time to start up
 #sleep 10
 
-while read testcase lng lat dlng dlat;
+while read testcase;
 do
 	# skip comment and empty lines
 	[[ "$testcase" =~ \#.* ]] && continue
@@ -78,36 +77,18 @@ do
     # prepare feed with current timestamps
 	xmlstarlet c14n $testcase.xml  > /tmp/$testcase.xml
 
-	echo -e "\nTesting $testcase\nSetting position and destination..."
-	# set start and destination
-	dbus-send  --print-reply --session --type=method_call --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.set_position string:"geo: $lng $lat" >/dev/null
-	dbus-send  --print-reply --session --type=method_call --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.set_destination string:"geo: $dlng $dlat" string:"$testcase" >/dev/null
-	# wait until route calculation is complete
-	#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
-	# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
-    if [ $interactive -gt 0 ]; then
-        echo "When route calculation is complete, press [ENTER] to continue"
-        read -s < /dev/tty
-    else
-	    sleep $sleep
-    fi
-	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-1-initial.gpx" >/dev/null
-	
+    echo -e "\nTesting $testcase"
 	# inject traffic messages
 	echo "Sending traffic feed..."
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.traffic_inject string:"/tmp/$testcase.xml" >/dev/null
-	
-	# wait until route calculation is complete
-	#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
-	# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
+	# for now we have to use sleep
     if [ $interactive -gt 0 ]; then
-        echo "When the route has updated, press [ENTER] to continue"
+        echo "When log output has stopped, press [ENTER] to continue"
         read -s < /dev/tty
     else
 	    sleep $sleep
     fi
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.traffic_export string:"$datadir/traffic-map-$testcase.gpx" >/dev/null
-	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-2-partial-update.gpx" >/dev/null
 
     # check for presence of message IDs in message store and GPX
     grep " id=" /tmp/$testcase.xml | sed "s/.* id=\"\([^\"]*\)\".*/\1/" | while read msgid;
@@ -115,22 +96,8 @@ do
         grep " id=\"$msgid\"" $bindir/traffic.xml > /dev/null && { grep "<rte><type>.*</type><name>$msgid</name>" $datadir/traffic-map-$testcase.gpx > /dev/null || echo "*** Message $msgid has no associated segments!"; } || echo "*** Message $msgid not found in persistent storage!"
     done
 	
-	# set destination again to force route recalculation
-	echo "Setting destination to force full route recalculation..."
-	dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.set_destination string:"geo: $dlng $dlat" string:"$testcase" >/dev/null
-	# wait until route calculation is complete
-	#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
-	# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
-    if [ $interactive -gt 0 ]; then
-        echo "When route calculation is complete, press [ENTER] to continue"
-        read -s < /dev/tty
-    else
-	    sleep $sleep
-    fi
-	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-3-full-update.gpx" >/dev/null
-	
 	# inject cancellation messages
-	echo "Setting cancellation for traffic feed..."
+	echo "Sending cancellation for traffic feed..."
     echo -e "<feed>" > /tmp/$testcase-cancel.xml
     grep " id=" /tmp/$testcase.xml | sed "s/.* id=\"\([^\"]*\)\".*/\1/" | while read msgid;
     do
@@ -139,11 +106,9 @@ do
     echo -e "</feed>" >> /tmp/$testcase-cancel.xml
 
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.traffic_inject string:"/tmp/$testcase-cancel.xml" >/dev/null
-	# wait until route calculation is complete
-	#dbus-send  --print-reply --session --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.route.get_attr string:"route_status"
-	# for now we have to use sleep, for which 30 secs should be enough (routing from Warsaw to Lisbon takes ~20 seconds)
+	# for now we have to use sleep
     if [ $interactive -gt 0 ]; then
-        echo "When the route has updated, press [ENTER] to continue"
+        echo "When log output has stopped, press [ENTER] to continue"
         read -s < /dev/tty
     else
 	    sleep $sleep
@@ -155,7 +120,6 @@ do
         grep " id=\"$msgid\"" $bindir/traffic.xml > /dev/null && echo "*** Message $msgid is still in persistent storage!"
     done
 
-	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-4-cancellation.gpx" >/dev/null
 	echo "$testcase: done"
 done < $testcases
 
