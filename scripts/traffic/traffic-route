@@ -106,7 +106,6 @@ do
     else
 	    sleep $sleep
     fi
-	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.traffic_export string:"$datadir/traffic-map-$testcase.gpx" >/dev/null
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.export_as_gpx string:"$datadir/traffic-route-$testcase-2-partial-update.gpx" >/dev/null
 
     # check for presence of message IDs in message store and GPX

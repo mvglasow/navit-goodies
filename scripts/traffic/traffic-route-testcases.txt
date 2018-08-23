@@ -12,31 +12,6 @@
 # Lines starting with # are comment lines and will be ignored. Empty lines will also be skipped.
 
 
-# Test with real-world feeds (most of which crashed Navit or exhibited some bug)
-realworld1 11.6034150 48.1955644 11.5890849 48.1926900
-realworld2 11.6034150 48.1955644 11.5890849 48.1926900
-realworld3 11.6034150 48.1955644 11.5890849 48.1926900
-realworld4 11.6034150 48.1955644 11.5890849 48.1926900
-realworld5 11.6034150 48.1955644 11.5890849 48.1926900
-realworld6 11.6034150 48.1955644 11.5890849 48.1926900
-
-# Subset of realworld2, exhibited a now-fixed bug
-##Traitsching 11.6034150 48.1955644 11.5890849 48.1926900
-
-# Modified subset of realworld3, test for pass roads but with fully matching ref
-##H11Match 11.6034150 48.1955644 11.5890849 48.1926900
-
-# Subset of realworld5, exhibited a now-fixed bug with bidirectional locations on motorways
-##A7 11.6034150 48.1955644 11.5890849 48.1926900
-
-# Comparison for ring roads with and without auxiliary points
-# compliant format with via point
-B2R 11.6034150 48.1955644 11.5890849 48.1926900
-# via point missing
-B2RNoAux 11.6034150 48.1955644 11.5890849 48.1926900
-# two separate segments
-B2RSeparate 11.6034150 48.1955644 11.5890849 48.1926900
-
 # Hand-generated test cases with real routes
 MunichBayernkaserne 11.6034150 48.1955644 11.5890849 48.1926900
 MunichMoosach 11.5292039 48.1765238 11.5297516 48.1820748
