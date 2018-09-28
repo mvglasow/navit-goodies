@@ -79,13 +79,12 @@ do
 	fi
 
 	
-	export SOURCE_PATH=$srcdir/navit
 	if [ ! -f $builddir ];
 	then
 	   mkdir $builddir
 	fi
 	cd $builddir && \
-	cmake $SOURCE_PATH && \
+	cmake $srcdir && \
 	make || \
 	{ echo "Build failed, check output for errors."; exit 1; }
 
