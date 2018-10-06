@@ -6,6 +6,7 @@
 
 # Test with real-world feeds (most of which crashed Navit or exhibited some bug)
 realworld1
+# big feed, causes timing issues with test script
 realworld2
 realworld3
 realworld4
