@@ -26,11 +26,11 @@ realworld7
 
 # Comparison for ring roads with and without auxiliary points
 # compliant format with via point
-B2R
+#B2R
 # via point missing
-B2RNoAux
+#B2RNoAux
 # two separate segments
-B2RSeparate
+#B2RSeparate,
 # locations interpreted as precise, not low-res
 #B2RHiRes
 # Ring road test cases from dummy plugin (with via point)
