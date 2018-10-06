@@ -28,6 +28,10 @@ B2R
 B2RNoAux
 # two separate segments
 B2RSeparate
+# locations interpreted as precise, not low-res
+#B2RHiRes
+# Ring road test cases from dummy plugin (with via point)
+DummyB2R
 
 # Message with data not understood by the current version, as would happen with future TraFF formats
 future
