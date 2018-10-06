@@ -1,0 +1,19 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<!-- Test case for future extensions -->
+<feed>
+  <message id="future:location" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <!-- Location in a format not understood by the current version -->
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A4" road_name="Torino-Trieste">
+      <futurelocation>+45.514229 +9.089460 R4nD0m57121ng +45.536701 +9.163930</futurelocation>
+    </location>
+    <events>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_SLOW_TRAFFIC">
+      </event>
+    </events>
+  </message>
+</feed>

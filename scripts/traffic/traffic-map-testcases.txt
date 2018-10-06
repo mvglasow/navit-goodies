@@ -28,3 +28,6 @@ B2R
 B2RNoAux
 # two separate segments
 B2RSeparate
+
+# Message with data not understood by the current version, as would happen with future TraFF formats
+future
