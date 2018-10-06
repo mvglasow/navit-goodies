@@ -1,0 +1,125 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<!-- Real-world test case with several at locations with auxiliary points -->
+<feed>
+  <message id="tmc:d.1.15:d.1.12254.n.1,13" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A7">
+      <from junction_name="Dietmannsried" junction_ref="132">+47.810600 +10.302100</from>
+      <to junction_name="Allgäuer Tor">+47.848251 +10.282100</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
+      </event>
+      <event class="HAZARD" type="HAZARD_ROAD_MARKING_WORK">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12250.n.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A7">
+      <from junction_name="Allgäu" junction_ref="136">+47.687599 +10.367800</from>
+      <to junction_name="Betzigau" junction_ref="135">+47.716499 +10.361200</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.10802.p.1,11" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A3">
+      <from junction_name="Kirchroth" junction_ref="105">+48.959702 +12.542500</from>
+      <to junction_name="Bogen" junction_ref="107">+48.921501 +12.732600</to>
+    </location>
+    <events>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC_LIKELY">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12582.p.5,12" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A8">
+      <from junction_name="Bernau am Chiemsee" junction_ref="106">+47.815201 +12.363300</from>
+      <to junction_name="Inntal" junction_ref="101">+47.810001 +12.096800</to>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_LEFT_LANE"/>
+      </event>
+      <event class="HAZARD" type="HAZARD_SLOW_MOVING_MAINTENANCE">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12413.n.4" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A70">
+      <from junction_name="Schweinfurt/Werneck" junction_ref="2">+50.001598 +10.078500</from>
+      <to junction_name="Werneck" junction_ref="3">+50.001900 +10.118700</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_VEHICLE">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.8105.n.5" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A94">
+      <from junction_name="Heldenstein" junction_ref="17">+48.247501 +12.361900</from>
+      <to junction_name="Einhausung Wimpasing">+48.248901 +12.402650</to>
+    </location>
+    <events>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.61452.n.5" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_ref="GM64" road_name="Grasserstraße">
+      <from junction_name="Landsberger Straße">+48.139301 +11.547100</from>
+      <at junction_name="Hackerbrücke">+48.141449 +11.548400</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12752.n.4" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A9">
+      <from junction_name="Nürnberg-Ost" junction_ref="53">+49.395699 +11.199900</from>
+      <to junction_name="Nürnberg-Fischbach" junction_ref="52">+49.405998 +11.195500</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_HGV">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12767.n.5,11" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A9">
+      <from junction_name="Bindlacher Berg" junction_ref="40b">+50.015301 +11.605400</from>
+      <at junction_name="Bayreuth/Kulmbach" junction_ref="40a">+50.025700 +11.604800</at>
+    </location>
+    <events>
+      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
+      </event>
+      <event class="CONSTRUCTION" type="CONSTRUCTION_CONSTRUCTION_WORK">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:d.1.15:d.1.12422.p.4,7" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A70">
+      <from junction_name="Hallstadt" junction_ref="15">+49.921200 +10.875600</from>
+      <at junction_name="Bamberg-Hafen" junction_ref="14">+49.917801 +10.859800</at>
+    </location>
+    <events>
+      <event class="HAZARD" type="HAZARD_ON_EXIT">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_VEHICLE">
+        <supplementary_info class="WARNING" type="S_WARNING_DANGER"/>
+      </event>
+    </events>
+  </message>
+</feed>

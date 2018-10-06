@@ -11,6 +11,8 @@ realworld3
 realworld4
 realworld5
 realworld6
+# first test case with 'at' locations and an auxiliary point
+realworld7
 
 # Subset of realworld2, exhibited a now-fixed bug
 ##Traitsching
