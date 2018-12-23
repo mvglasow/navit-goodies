@@ -4,7 +4,7 @@
 ]>
 <navit_messages>
   <message id="test:S16-W" receive_time="&now;" update_time="&now;" expiration_time="&later;">
-    <location directionality="ONE_DIRECTION" fuzziness="LOW_RES" road_type="street_n_lanes" road_ref="S16" destination="Bludenz" tmc_direction="-1" tmc_table="4:1">
+    <location directionality="ONE_DIRECTION" fuzziness="LOW_RES" road_class="street_n_lanes" road_ref="S16" destination="Bludenz" tmc_direction="-1" tmc_table="4:1">
       <from junction_name="St. Anton am Arlberg" tmc_id="5511-5">+47.14174 +10.31498</from>
       <to junction_name="Langen am Arlberg" tmc_id="5511">+47.13046 +10.11436</to>
     </location>
