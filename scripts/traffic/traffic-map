@@ -74,10 +74,11 @@ do
     later=`date -Iseconds --date="20 minutes"`
     echo -e "<!ENTITY now \"$now\">\n<!ENTITY later \"$later\">\n" > traffic_entities.xml.inc
 
+    echo -e "\nTesting $testcase"
     # prepare feed with current timestamps
+    echo "Preparing feed..."
 	xmlstarlet c14n $testcase.xml  > /tmp/$testcase.xml
 
-    echo -e "\nTesting $testcase"
 	# inject traffic messages
 	echo "Sending traffic feed..."
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.traffic_inject string:"/tmp/$testcase.xml" >/dev/null
