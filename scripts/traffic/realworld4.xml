@@ -66,15 +66,6 @@
       </event>
     </events>
   </message>
-  <message id="tmc:4.9.0:4.9.12538.p.5" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
-    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_name="Autoverlad Oberalp">
-      <at junction_name="Andermatt">+46.636902 +8.593550</at>
-    </location>
-    <events>
-      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
-      </event>
-    </events>
-  </message>
   <message id="tmc:4.9.0:4.9.10041.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
     <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A1">
       <from junction_name="Wangen an der Aare" junction_ref="42">+47.241600 +7.650100</from>
@@ -179,17 +170,6 @@
       </event>
     </events>
   </message>
-  <message id="tmc:4.9.0:4.9.10362.n.7,11" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
-    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A13">
-      <at junction_name="S. Bernardino-Pass" junction_ref="32">+46.528801 +9.191050</at>
-    </location>
-    <events>
-      <event class="RESTRICTION" type="RESTRICTION_RAMP_CLOSED">
-      </event>
-      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
-      </event>
-    </events>
-  </message>
   <message id="tmc:5.1.1:5.1.1729.n.4" receive_time="&now;" update_time="&now;" expiration_time="&later;">
     <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A16" road_name="Napoli-Canosa">
       <from junction_name="Baiano">+40.939892 +14.618720</from>
@@ -240,19 +220,6 @@
       <event class="CONGESTION" type="CONGESTION_TRAFFIC_CONGESTION">
       </event>
       <event class="DELAY" type="DELAY_DELAY">
-      </event>
-    </events>
-  </message>
-  <message id="tmc:4.9.0:4.9.10428.p.8,11" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
-    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
-      <at junction_name="Eptingen" junction_ref="13">+47.381901 +7.817200</at>
-    </location>
-    <events>
-      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
-      </event>
-      <event class="CONSTRUCTION" type="CONSTRUCTION_LONGTERM_ROADWORKS">
-      </event>
-      <event class="CONSTRUCTION" type="CONSTRUCTION_CONSTRUCTION_WORK">
       </event>
     </events>
   </message>

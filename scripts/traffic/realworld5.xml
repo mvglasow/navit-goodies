@@ -60,16 +60,6 @@
       </event>
     </events>
   </message>
-  <message id="tmc:5.1.1:5.1.34819.p.9" receive_time="&now;" update_time="&now;" expiration_time="&later;">
-    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="SP16(SO)" road_name="Orobica">
-      <at junction_name="SP16dirA-Colorina">+46.157902 +9.742760</at>
-    </location>
-    <events>
-      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
-        <supplementary_info class="VEHICLE" type="S_VEHICLE_MOTOR"/>
-      </event>
-    </events>
-  </message>
   <message id="tmc:d.1.15:d.1.12253.p.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
     <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A7">
       <from junction_name="Woringen" junction_ref="130">+47.925098 +10.214300</from>
@@ -232,16 +222,6 @@
       </event>
     </events>
   </message>
-  <message id="tmc:5.1.1:5.1.34805.p.9" receive_time="&now;" update_time="&now;" expiration_time="&later;">
-    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="SP11(SO)" road_name="della Val Masino">
-      <at junction_name="Tartano">+46.105652 +9.680530</at>
-    </location>
-    <events>
-      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
-        <supplementary_info class="VEHICLE" type="S_VEHICLE_MOTOR"/>
-      </event>
-    </events>
-  </message>
   <message id="tmc:d.1.15:d.1.31808.p.4,5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
     <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A94">
       <from junction_name="Burghausen" junction_ref="25">+48.244900 +12.833900</from>
@@ -305,16 +285,6 @@
     </location>
     <events>
       <event class="CONGESTION" type="CONGESTION_QUEUE">
-      </event>
-    </events>
-  </message>
-  <message id="tmc:5.1.1:5.1.7458.p.9.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
-    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="TRUNK" road_ref="SS117" road_name="Bis Centrale Sicula">
-      <from junction_name="Grottacalda">+37.465309 +14.360100</from>
-      <to junction_name="Bivio Ramata/Innesto Ss561 Pergusina">+37.490559 +14.301080</to>
-    </location>
-    <events>
-      <event class="RESTRICTION" type="RESTRICTION_CLOSED_AHEAD">
       </event>
     </events>
   </message>
