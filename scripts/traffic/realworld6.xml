@@ -250,7 +250,6 @@
       </event>
     </events>
   </message>
-  </message>
   <message id="tmc:d.1.15:d.1.12906.n.12" receive_time="&now;" update_time="&now;" expiration_time="&later;">
     <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A94">
       <from junction_name="Anzing" junction_ref="10">+48.161598 +11.855300</from>
