@@ -1,0 +1,30 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<feed>
+  <message id="tmc:4.9.0:4.9.20694.n.1,5,12.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="11" road_name="Hauptstrasse">
+      <from junction_name="Le Sépey">+46.361000 +7.049450</from>
+      <to junction_name="La Comballaz">+46.377750 +7.081400</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_PROBLEM">
+      </event>
+      <event class="HAZARD" type="HAZARD_LANDSLIPS">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_SINGLE_ALTERNATE_LINE_TRAFFIC">
+      </event>
+    </events>
+  </message>
+  <message id="tmc:a.1.0:a.1.36891.n.1" receive_time="&now;" update_time="&now;" expiration_time="&later;" urgency="URGENT">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" ramps="NONE" road_class="PRIMARY" road_ref="B179" road_name="Fernpass Straße">
+      <from junction_name="Heiterwang-Nord">+47.450680 +10.733320</from>
+      <to junction_name="Nassereith">+47.305141 +10.840980</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+    </events>
+  </message>
+</feed>

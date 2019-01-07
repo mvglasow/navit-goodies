@@ -1,0 +1,25 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<!--
+     Test case for endpoint matching on urban dual-carriageway roads.
+     Junction names are the names of the crosing roads.
+     No segments of the crossing roads should be among the matched segments.
+-->
+<feed>
+  <message id="tmc:d.1.15:d.1.46572.p.1,14" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_ref="GM4" road_name="Leopoldstraße">
+      <from junction_name="Potsdamer Straße">+48.167301 +11.586200</from>
+      <to junction_name="Ungererstraße">+48.164200 +11.586500</to>
+    </location>
+    <events>
+      <event class="INCIDENT" type="INCIDENT_ACCIDENT">
+      </event>
+      <event class="CONGESTION" type="CONGESTION_STATIONARY_TRAFFIC">
+      </event>
+      <event class="HAZARD" type="HAZARD_PASSABLE_WITH_CARE_BELOW_ELEVATION">
+      </event>
+    </events>
+  </message>
+</feed>

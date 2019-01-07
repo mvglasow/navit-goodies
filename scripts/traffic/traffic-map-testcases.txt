@@ -20,6 +20,12 @@ realworld7
 
 # Modified subset of realworld3, test for pass roads but with fully matching ref
 ##H11Match
+# Test cases for mountain pass roads
+MountainPasses
+# Urban dual-carriageway roads (subset of realworld5)
+#UrbanEndpoint
+# Ensure we do not include any adjacent roads here (subset of realworld3)
+#Rubigen
 
 # Subset of realworld5, exhibited a now-fixed bug with bidirectional locations on motorways
 ##A7

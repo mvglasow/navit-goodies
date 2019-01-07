@@ -1,0 +1,23 @@
+<!DOCTYPE feed [
+<!ENTITY % entities SYSTEM "traffic_entities.xml.inc">
+%entities;
+]>
+<feed>
+  <message id="tmc:4.9.0:4.9.10669.p.1,4,5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
+    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A6">
+      <from junction_name="Rubigen" junction_ref="14">+46.890099 +7.539900</from>
+      <to junction_name="Kiesen" junction_ref="15">+46.809898 +7.580500</to>
+    </location>
+    <events>
+      <event class="CONGESTION" type="CONGESTION_TRAFFIC_PROBLEM">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_VEHICLE">
+      </event>
+      <event class="INCIDENT" type="INCIDENT_BROKEN_DOWN_HGV">
+      </event>
+      <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
+        <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
+      </event>
+    </events>
+  </message>
+</feed>
