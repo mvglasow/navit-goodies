@@ -81,17 +81,6 @@
       </event>
     </events>
   </message>
-  <message id="tmc:4.9.0:4.9.10490.p.8,11" receive_time="&now;" update_time="&now;" expiration_time="&later;">
-    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A22">
-      <at junction_name="Liestal-Süd">+47.480400 +7.747450</at>
-    </location>
-    <events>
-      <event class="RESTRICTION" type="RESTRICTION_NTH_ENTRY_CLOSED">
-      </event>
-      <event class="CONSTRUCTION" type="CONSTRUCTION_ROADWORKS">
-      </event>
-    </events>
-  </message>
   <message id="tmc:4.9.0:4.9.10460.p.8" receive_time="&now;" update_time="&now;" expiration_time="&later;">
     <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="MOTORWAY" road_ref="A2">
       <at junction_name="Göschenen" junction_ref="40">+46.674850 +8.593450</at>
@@ -216,15 +205,6 @@
       </event>
       <event class="RESTRICTION" type="RESTRICTION_LANE_CLOSED">
         <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
-      </event>
-    </events>
-  </message>
-  <message id="tmc:4.9.0:4.9.12539.p.5" receive_time="&now;" update_time="&now;" expiration_time="&later;">
-    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_name="Autoverlad Oberalp">
-      <at junction_name="Sedrun">+46.681301 +8.769600</at>
-    </location>
-    <events>
-      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
       </event>
     </events>
   </message>

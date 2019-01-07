@@ -3,18 +3,6 @@
 %entities;
 ]>
 <feed>
-  <message id="tmc:d.1.15:d.1.43121.p.5,11.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
-    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="PRIMARY" road_ref="B20">
-      <from junction_name="Traitsching">+49.152901 +12.645500</from>
-      <to junction_name="Rißmannsdorf">+49.087502 +12.640300</to>
-    </location>
-    <events>
-      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
-      </event>
-      <event class="CONSTRUCTION" type="CONSTRUCTION_RESURFACING_WORK">
-      </event>
-    </events>
-  </message>
   <message id="tmc:d.1.15:d.1.32150.p.3" receive_time="&now;" update_time="&now;" expiration_time="&later;">
     <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="B472">
       <from junction_name="Peiting-Ost">+47.800499 +10.961800</from>
@@ -69,32 +57,6 @@
         <supplementary_info class="POSITION" type="S_POSITION_RIGHT_LANE"/>
       </event>
       <event class="RESTRICTION" type="RESTRICTION_LET_EMERGENCY_SERVICES_PASS">
-      </event>
-    </events>
-  </message>
-  <message id="tmc:d.1.15:d.1.23853.n.5,11.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
-    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="PRIMARY" road_ref="B472">
-      <from junction_name="Sindelsdorf">+47.728100 +11.325400</from>
-      <to junction_name="B 11 bei Bad Heilbrunn">+47.730499 +11.432600</to>
-    </location>
-    <events>
-      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
-      </event>
-      <event class="CONSTRUCTION" type="CONSTRUCTION_RESURFACING_WORK">
-      </event>
-    </events>
-  </message>
-  <message id="tmc:d.1.15:d.1.41414.p.2,11.2" receive_time="&now;" update_time="&now;" expiration_time="&later;">
-    <location fuzziness="LOW_RES" directionality="BOTH_DIRECTIONS" road_class="MOTORWAY" road_ref="A7">
-      <from junction_name="Dinkelsbühl/Fichtenau" junction_ref="112">+49.093849 +10.210250</from>
-      <to junction_name="Virngrundtunnel">+49.022049 +10.196850</to>
-    </location>
-    <events>
-      <event class="CONGESTION" type="CONGESTION_TRAFFIC_PROBLEM">
-      </event>
-      <event class="CONSTRUCTION" type="CONSTRUCTION_CONSTRUCTION_WORK">
-      </event>
-      <event class="CONSTRUCTION" type="CONSTRUCTION_NEW_ROADWORKS_LAYOUT">
       </event>
     </events>
   </message>
@@ -353,18 +315,6 @@
     </location>
     <events>
       <event class="RESTRICTION" type="RESTRICTION_CLOSED_AHEAD">
-      </event>
-    </events>
-  </message>
-  <message id="tmc:d.1.15:d.1.21599.n.5,11.1" receive_time="&now;" update_time="&now;" expiration_time="&later;">
-    <location fuzziness="LOW_RES" directionality="ONE_DIRECTION" road_class="PRIMARY" road_ref="B20">
-      <from junction_name="Rißmannsdorf">+49.087502 +12.640300</from>
-      <to junction_name="Traitsching">+49.152901 +12.645500</to>
-    </location>
-    <events>
-      <event class="RESTRICTION" type="RESTRICTION_CLOSED">
-      </event>
-      <event class="CONSTRUCTION" type="CONSTRUCTION_RESURFACING_WORK">
       </event>
     </events>
   </message>
