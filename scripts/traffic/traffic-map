@@ -90,6 +90,13 @@ do
 	    sleep $sleep
     fi
 	dbus-send --session --type=method_call --print-reply --dest=org.navit_project.navit /org/navit_project/navit/default_navit org.navit_project.navit.navit.traffic_export string:"$datadir/traffic-map-$testcase.gpx" >/dev/null
+	# for now we have to use sleep
+    if [ $interactive -gt 0 ]; then
+        echo "When log output has stopped, press [ENTER] to continue"
+        read -s < /dev/tty
+    else
+	    sleep $sleep
+    fi
 
     # check for presence of message IDs in message store and GPX
     grep " id=" /tmp/$testcase.xml | sed "s/.* id=\"\([^\"]*\)\".*/\1/" | while read msgid;
